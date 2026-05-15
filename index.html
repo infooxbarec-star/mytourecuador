@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyTourEcuador</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f9f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #006400 0%, #228b22 50%, #ffd700 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .hero a {
+      background-color: #ffd700;
+      color: #333;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .hero a:hover {
+      background-color: #e6c200;
+    }
+
+    .destinations {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .destinations h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #006400;
+    }
+
+    .destinations p.subtitle {
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-img {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .card-body {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .card-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #006400;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #006400;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌿 MyTourEcuador</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Destinos</a>
+      <a href="#">Tours</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Descubre la Magia de Ecuador</h2>
+    <p>Explora sus volcanes, selvas, playas y las maravillosas Islas Galápagos.</p>
+    <a href="#">Ver Destinos</a>
+  </section>
+
+  <section class="destinations">
+    <h2>Destinos Populares</h2>
+    <p class="subtitle">Elige tu próxima aventura en Ecuador</p>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-img" style="background-color: #e8f5e9;">🌋</div>
+        <div class="card-body">
+          <h3>Quito</h3>
+          <p>La capital del mundo, patrimonio cultural de la humanidad rodeada de volcanes.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-color: #e3f2fd;">🐢</div>
+        <div class="card-body">
+          <h3>Islas Galápagos</h3>
+          <p>Hogar de especies únicas en el mundo, declaradas patrimonio natural de la humanidad.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-color: #fff8e1;">🌊</div>
+        <div class="card-body">
+          <h3>Montañita</h3>
+          <p>Famoso destino de playa y surf en la costa ecuatoriana del Pacífico.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background-color: #f3e5f5;">🌿</div>
+        <div class="card-body">
+          <h3>Amazonía</h3>
+          <p>Adéntrate en la selva amazónica y descubre su biodiversidad única.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 MyTourEcuador. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
