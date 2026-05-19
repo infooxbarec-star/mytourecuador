@@ -1,53 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Tour EC — A South American Atelier</title>
+<title>My Tour EC | Luxury Journeys Across Ecuador, Galapagos, Colombia & Peru</title>
+<meta name="description" content="My Tour EC designs private luxury journeys across Ecuador, Galapagos, Colombia and Peru with bespoke planning, refined hospitality and concierge support.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-L2aP_gJjbsW5ssGTIQD2Szkd0XsihWNZwA&s">
+<link rel="preload" as="image" href="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e964b_Web%2014.jpg">
+<link rel="preload" as="image" href="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e9638_Web%2046.jpg">
+<link rel="preload" as="image" href="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e963d_Web%2047.jpg">
+<link rel="preload" as="image" href="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e9621_Web%2048.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  /* ---------- TOKENS ---------- */
   :root {
-    --ink: #14110D;
-    --ink-soft: #1F1B16;
-    --cream: #F4ECDD;
-    --cream-warm: #EBE0CC;
-    --stone: #A89886;
-    --stone-soft: #C4B5A0;
-    --gold: #B89B5E;
-    --gold-soft: #D4B97A;
-    --line: rgba(245, 236, 221, 0.10);
-    --line-ink: rgba(20, 17, 13, 0.10);
-
-    --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
-    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-    --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
-
-    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-
-    --pad-page: clamp(1.5rem, 4vw, 4rem);
+    --ink: #0d1318;
+    --ink-2: #182129;
+    --sand: #f4ecdd;
+    --sand-deep: #e7dcc8;
+    --stone: #9e907d;
+    --gold: #b89b5e;
+    --gold-soft: #d8bb7d;
+    --white: #ffffff;
+    --line-light: rgba(255, 255, 255, 0.12);
+    --line-dark: rgba(13, 19, 24, 0.1);
+    --shadow: 0 28px 80px rgba(0, 0, 0, 0.18);
+    --shadow-deep: 0 36px 120px rgba(0, 0, 0, 0.28);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --pad: clamp(1.25rem, 3vw, 3rem);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
   html {
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
   }
 
   body {
-    background: var(--cream);
-    color: var(--ink);
     font-family: var(--sans);
-    font-weight: 300;
+    background: var(--sand);
+    color: var(--ink);
     line-height: 1.6;
     overflow-x: hidden;
-    /* paper-grain overlay */
-    position: relative;
   }
 
   body::before {
@@ -55,1783 +58,2430 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 9999;
     opacity: 0.035;
     mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    z-index: 999;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.45 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
 
-  ::selection { background: var(--gold); color: var(--ink); }
+  img {
+    display: block;
+    max-width: 100%;
+  }
 
-  /* ---------- TYPOGRAPHY ---------- */
-  .display {
-    font-family: var(--serif);
-    font-weight: 300;
-    line-height: 0.98;
-    letter-spacing: -0.02em;
+  a {
+    color: inherit;
+    text-decoration: none;
   }
-  .display em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--gold);
-  }
-  .eyebrow {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-  }
-  .body-l { font-size: clamp(15px, 1.1vw, 17px); line-height: 1.65; font-weight: 300; }
-  .body-s { font-size: 13px; line-height: 1.5; font-weight: 400; }
 
-  /* ---------- LOADER ---------- */
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    border: 0;
+    background: none;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 2000;
+    background: var(--white);
+    color: var(--ink);
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    transition: top 200ms ease;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
   .loader {
     position: fixed;
     inset: 0;
     background: var(--ink);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 1.2s var(--ease-luxury), visibility 1.2s var(--ease-luxury);
+    display: grid;
+    place-items: center;
+    z-index: 3000;
+    transition: opacity 700ms var(--ease), visibility 700ms var(--ease);
   }
-  .loader-mark {
-    font-family: var(--serif);
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 0.4em;
-    color: var(--cream);
-    opacity: 0;
-    animation: loader-fade 2.2s var(--ease-luxury) forwards;
-  }
-  .loader-mark span { display: inline-block; opacity: 0; transform: translateY(8px); }
-  .loader-mark span:nth-child(1) { animation: letter 1s var(--ease-luxury) 0.1s forwards; }
-  .loader-mark span:nth-child(2) { animation: letter 1s var(--ease-luxury) 0.2s forwards; }
-  .loader-mark span:nth-child(3) { animation: letter 1s var(--ease-luxury) 0.3s forwards; }
-  .loader-mark span:nth-child(4) { animation: letter 1s var(--ease-luxury) 0.45s forwards; }
-  .loader-mark span:nth-child(5) { animation: letter 1s var(--ease-luxury) 0.55s forwards; }
-  .loader-mark span:nth-child(6) { animation: letter 1s var(--ease-luxury) 0.65s forwards; }
-  @keyframes letter { to { opacity: 1; transform: translateY(0); } }
-  @keyframes loader-fade { 0% { opacity: 0; } 30% { opacity: 1; } 100% { opacity: 1; } }
-  body.loaded .loader { opacity: 0; visibility: hidden; }
 
-  /* ---------- NAVBAR ---------- */
+  .loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .loader-logo {
+    width: min(180px, 40vw);
+    filter: brightness(1.08) contrast(1.08);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: loaderReveal 1.6s var(--ease) forwards;
+  }
+
+  @keyframes loaderReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
+    inset: 0 0 auto;
+    z-index: 1200;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 1.75rem var(--pad-page);
-    transition: padding 600ms var(--ease-luxury),
-                background 600ms var(--ease-luxury),
-                backdrop-filter 600ms var(--ease-luxury),
-                border-color 600ms var(--ease-luxury);
+    gap: 1rem;
+    padding: 1.1rem var(--pad);
+    color: var(--white);
+    transition: background 350ms var(--ease), backdrop-filter 350ms var(--ease), padding 350ms var(--ease), border-color 350ms var(--ease);
     border-bottom: 1px solid transparent;
-    color: var(--cream);
-  }
-  .nav.is-scrolled {
-    padding: 1.1rem var(--pad-page);
-    background: rgba(20, 17, 13, 0.55);
-    backdrop-filter: blur(24px) saturate(160%);
-    -webkit-backdrop-filter: blur(24px) saturate(160%);
-    border-bottom-color: rgba(245, 236, 221, 0.08);
-  }
-  .nav.is-light { color: var(--ink); }
-  .nav.is-light.is-scrolled {
-    background: rgba(244, 236, 221, 0.7);
-    border-bottom-color: var(--line-ink);
   }
 
-  .nav-burger {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: inherit;
-    font: inherit;
-    padding: 0;
+  .nav.is-scrolled {
+    background: rgba(13, 19, 24, 0.58);
+    backdrop-filter: blur(26px) saturate(150%);
+    -webkit-backdrop-filter: blur(26px) saturate(150%);
+    padding: 0.8rem var(--pad);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
   }
-  .burger-lines {
-    width: 26px;
+
+  .nav-toggle {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    color: inherit;
+  }
+
+  .nav-toggle-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .nav-toggle-lines {
+    width: 28px;
     height: 12px;
     position: relative;
   }
-  .burger-lines span {
+
+  .nav-toggle-lines span {
     position: absolute;
     left: 0;
+    width: 100%;
     height: 1px;
     background: currentColor;
-    transition: width 500ms var(--ease-luxury), transform 500ms var(--ease-luxury);
-  }
-  .burger-lines span:nth-child(1) { top: 3px; width: 100%; }
-  .burger-lines span:nth-child(2) { top: 9px; width: 70%; }
-  .nav-burger:hover .burger-lines span:nth-child(2) { width: 100%; }
-  .nav-burger-label {
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    font-weight: 400;
+    transition: transform 250ms var(--ease), opacity 250ms var(--ease);
   }
 
-  .nav-mark {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(14px, 1.1vw, 17px);
-    letter-spacing: 0.42em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 300ms ease;
+  .nav-toggle-lines span:first-child {
+    top: 2px;
   }
-  .nav-mark:hover { opacity: 0.7; }
-  .nav-mark .dot { color: var(--gold); }
 
-  .nav-cta-wrap { justify-self: end; }
-  .nav-cta {
+  .nav-toggle-lines span:last-child {
+    bottom: 2px;
+    width: 72%;
+  }
+
+  .nav-logo {
+    justify-self: center;
     display: inline-flex;
     align-items: center;
-    gap: 0.9rem;
-    padding: 0.85rem 1.4rem;
-    border: 1px solid currentColor;
-    border-radius: 100px;
-    color: inherit;
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 0.28em;
+    justify-content: center;
+  }
+
+  .nav-logo img,
+  .menu-brand img,
+  .footer-logo img {
+    width: auto;
+    max-height: 54px;
+    object-fit: contain;
+    filter: brightness(1.12) contrast(1.05);
+  }
+
+  .nav-cta-wrap {
+    justify-self: end;
+  }
+
+  .button,
+  .button-secondary,
+  .button-ghost,
+  .pill-link,
+  .floating-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-height: 3.2rem;
+    padding: 0.95rem 1.35rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: transform 250ms var(--ease), background 250ms var(--ease), border-color 250ms var(--ease), box-shadow 250ms var(--ease), color 250ms var(--ease);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-weight: 400;
-    transition: background 400ms var(--ease-luxury), color 400ms var(--ease-luxury), border-color 400ms var(--ease-luxury);
+  }
+
+  .button:hover,
+  .button-secondary:hover,
+  .button-ghost:hover,
+  .pill-link:hover,
+  .floating-link:hover {
+    transform: translateY(-2px);
+  }
+
+  .button {
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+    color: var(--ink);
+    box-shadow: 0 18px 50px rgba(184, 155, 94, 0.28);
+  }
+
+  .button:hover {
+    box-shadow: 0 24px 60px rgba(184, 155, 94, 0.34);
+  }
+
+  .button-secondary,
+  .button-ghost,
+  .pill-link,
+  .floating-link {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    backdrop-filter: blur(12px);
+  }
+
+  .button-secondary:hover,
+  .button-ghost:hover,
+  .pill-link:hover,
+  .floating-link:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .arrow {
+    width: 16px;
+    height: 1px;
+    background: currentColor;
     position: relative;
-    overflow: hidden;
+    flex: 0 0 auto;
   }
-  .nav-cta::before {
+
+  .arrow::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: var(--cream);
-    transform: translateY(100%);
-    transition: transform 500ms var(--ease-luxury);
-    z-index: -1;
-  }
-  .nav-cta:hover { color: var(--ink); border-color: var(--cream); }
-  .nav-cta:hover::before { transform: translateY(0); }
-  .nav-cta .arrow {
-    width: 14px; height: 1px; background: currentColor; position: relative;
-    transition: width 400ms var(--ease-luxury);
-  }
-  .nav-cta .arrow::after {
-    content: '';
-    position: absolute;
-    right: 0; top: -3px;
-    width: 7px; height: 7px;
+    right: 0;
+    top: -3px;
+    width: 7px;
+    height: 7px;
     border-top: 1px solid currentColor;
     border-right: 1px solid currentColor;
     transform: rotate(45deg);
   }
-  .nav-cta:hover .arrow { width: 22px; }
 
-  /* ---------- FULLSCREEN MENU ---------- */
   .menu-overlay {
     position: fixed;
     inset: 0;
-    z-index: 150;
-    pointer-events: none;
+    z-index: 2200;
+    opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+    transition: opacity 450ms var(--ease), visibility 450ms var(--ease);
   }
-  .menu-overlay.is-open { pointer-events: auto; visibility: visible; }
-  .menu-bg {
+
+  .menu-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .menu-backdrop {
     position: absolute;
     inset: 0;
-    background: var(--ink);
-    clip-path: circle(0% at calc(100% - 60px) 60px);
-    transition: clip-path 900ms var(--ease-luxury);
+    background: rgba(6, 10, 14, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
   }
-  .menu-overlay.is-open .menu-bg {
-    clip-path: circle(160% at calc(100% - 60px) 60px);
-  }
-  .menu-inner {
+
+  .menu-shell {
     position: relative;
-    height: 100%;
+    min-height: 100%;
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    color: var(--cream);
-    opacity: 0;
-    transition: opacity 600ms var(--ease-luxury) 300ms;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+    color: var(--white);
   }
-  .menu-overlay.is-open .menu-inner { opacity: 1; }
-  .menu-left {
-    padding: 8rem var(--pad-page) 4rem;
+
+  .menu-panel {
+    padding: 1.75rem var(--pad) 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 2rem;
   }
-  .menu-nav { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .menu-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+  }
+
+  .menu-search {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .menu-search-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .menu-search-label,
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .menu-search-button {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .menu-search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 1.2rem;
+    padding: 0.95rem 1rem;
+  }
+
+  .menu-search-box input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: var(--white);
+    outline: 0;
+  }
+
+  .menu-search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .search-results {
+    display: grid;
+    gap: 0.55rem;
+    max-height: 170px;
+    overflow: auto;
+    padding-right: 0.35rem;
+  }
+
+  .search-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.92rem;
+  }
+
+  .search-result small {
+    color: rgba(255, 255, 255, 0.44);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.62rem;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+    gap: 2.2rem;
+    min-height: 0;
+  }
+
+  .menu-nav {
+    display: grid;
+    align-content: start;
+    gap: 0.4rem;
+  }
+
   .menu-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    color: var(--white);
+    transition: opacity 250ms var(--ease), transform 250ms var(--ease);
+  }
+
+  .menu-link:hover,
+  .menu-link:focus-visible {
+    opacity: 0.78;
+    transform: translateX(8px);
+  }
+
+  .menu-num {
+    color: var(--gold-soft);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-top: 0.65rem;
+  }
+
+  .menu-link-text strong {
     display: block;
     font-family: var(--serif);
-    font-size: clamp(40px, 6vw, 72px);
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -0.015em;
-    color: var(--cream);
-    text-decoration: none;
-    position: relative;
-    transition: opacity 400ms var(--ease-luxury), padding-left 500ms var(--ease-luxury);
-    cursor: pointer;
+    font-size: clamp(2rem, 4vw, 3.75rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
   }
-  .menu-link .num {
-    font-size: 12px;
-    font-family: var(--sans);
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    vertical-align: top;
-    margin-right: 1rem;
-    opacity: 0.7;
-  }
-  .menu-link:hover { padding-left: 1.5rem; }
-  .menu-nav:hover .menu-link:not(:hover) { opacity: 0.3; }
 
-  .menu-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding-top: 3rem;
-    border-top: 1px solid rgba(245, 236, 221, 0.1);
+  .menu-link-text span {
+    display: block;
+    margin-top: 0.3rem;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
-  .menu-contact { display: flex; flex-direction: column; gap: 0.4rem; font-size: 13px; }
-  .menu-contact a { color: var(--cream); text-decoration: none; opacity: 0.7; transition: opacity 300ms; }
-  .menu-contact a:hover { opacity: 1; }
-  .menu-locale { display: flex; gap: 1.5rem; }
-  .menu-locale button {
-    background: none; border: none; color: var(--cream); cursor: pointer;
-    font: inherit; font-size: 12px; letter-spacing: 0.3em; opacity: 0.5;
-    transition: opacity 300ms; padding: 0; text-transform: uppercase;
-  }
-  .menu-locale button.active { opacity: 1; border-bottom: 1px solid var(--gold); padding-bottom: 4px; }
 
-  .menu-right {
+  .menu-side {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+  }
+
+  .menu-card {
     position: relative;
+    min-height: 460px;
+    border-radius: 1.75rem;
     overflow: hidden;
-    background: var(--ink-soft);
+    box-shadow: var(--shadow-deep);
   }
+
   .menu-preview {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 700ms var(--ease-luxury);
+    transition: opacity 500ms var(--ease);
   }
-  .menu-preview.active { opacity: 1; }
+
+  .menu-preview.active {
+    opacity: 1;
+  }
+
   .menu-preview img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.05);
-    animation: kenburns 12s ease-in-out infinite alternate;
+    transform: scale(1.04);
+    animation: menuKenBurns 14s ease-in-out infinite alternate;
   }
+
   .menu-preview::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(20,17,13,0) 0%, rgba(20,17,13,0.4) 100%);
+    background: linear-gradient(180deg, rgba(8, 12, 16, 0.08), rgba(8, 12, 16, 0.82));
   }
-  .menu-preview-label {
+
+  .menu-preview-copy {
     position: absolute;
-    bottom: 3rem; left: 3rem;
+    inset: auto 1.5rem 1.5rem;
+    z-index: 1;
+  }
+
+  .menu-preview-copy h3 {
     font-family: var(--serif);
-    font-style: italic;
-    font-size: 22px;
-    font-weight: 300;
-    color: var(--cream);
-    z-index: 2;
-  }
-  @keyframes kenburns {
-    from { transform: scale(1.05); }
-    to { transform: scale(1.15); }
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 0.95;
+    margin-bottom: 0.55rem;
   }
 
-  .menu-close {
-    position: absolute;
-    top: 1.6rem; right: var(--pad-page);
-    background: none; border: none; cursor: pointer;
-    color: var(--cream); font: inherit;
-    display: flex; align-items: center; gap: 0.8rem;
-    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
-    z-index: 10;
+  .menu-preview-copy p {
+    color: rgba(255, 255, 255, 0.76);
+    max-width: 28ch;
   }
-  .menu-close svg { width: 14px; height: 14px; }
 
-  /* ---------- HERO ---------- */
+  @keyframes menuKenBurns {
+    from { transform: scale(1.04); }
+    to { transform: scale(1.12); }
+  }
+
+  .menu-utilities {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .menu-utility-panel {
+    display: grid;
+    gap: 0.9rem;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.4rem;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .menu-utility-panel h4,
+  .menu-contact h4,
+  .footer-col h4,
+  .footer-contact h4,
+  .info-card h4,
+  .section-meta h4 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .menu-language,
+  .social-links,
+  .contact-list,
+  .utility-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .lang-link,
+  .social-link,
+  .utility-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 2.6rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: background 250ms var(--ease), border-color 250ms var(--ease), transform 250ms var(--ease);
+  }
+
+  .lang-link:hover,
+  .social-link:hover,
+  .utility-link:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .lang-link.is-active {
+    border-color: var(--gold-soft);
+    color: var(--gold-soft);
+  }
+
+  .contact-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+  }
+
   .hero {
     position: relative;
-    height: 100vh;
-    min-height: 700px;
+    min-height: 100svh;
+    color: var(--white);
     overflow: hidden;
-    color: var(--cream);
     isolation: isolate;
+    background: var(--ink);
   }
-  .hero-media {
+
+  .hero-media,
+  .hero-slide,
+  .hero-slide img,
+  .hero-grain {
     position: absolute;
     inset: 0;
-    z-index: -2;
   }
-  .hero-media img {
+
+  .hero-slide {
+    opacity: 0;
+    transition: opacity 1800ms var(--ease);
+  }
+
+  .hero-slide.is-active {
+    opacity: 1;
+  }
+
+  .hero-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.0);
-    animation: hero-zoom 18s var(--ease-luxury) forwards;
+    transform: scale(1.06);
+    transition: transform 6800ms var(--ease), filter 1800ms var(--ease);
+    filter: saturate(0.9) brightness(0.74);
   }
-  @keyframes hero-zoom {
-    to { transform: scale(1.08); }
+
+  .hero-slide.is-active img {
+    transform: scale(1.15);
+    filter: saturate(1) brightness(0.88);
   }
+
   .hero-media::after {
     content: '';
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(ellipse at center, rgba(0,0,0,0) 30%, rgba(0,0,0,0.35) 100%),
-      linear-gradient(180deg, rgba(20,17,13,0.35) 0%, rgba(20,17,13,0.1) 35%, rgba(20,17,13,0.55) 100%);
+    background: linear-gradient(180deg, rgba(5, 9, 13, 0.34), rgba(5, 9, 13, 0.18) 24%, rgba(5, 9, 13, 0.66) 70%, rgba(5, 9, 13, 0.9) 100%), radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.04), transparent 38%);
+  }
+
+  .hero-grain {
+    pointer-events: none;
+    opacity: 0.12;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.2), transparent 20%), radial-gradient(circle at 78% 12%, rgba(255, 255, 255, 0.08), transparent 18%), radial-gradient(circle at 55% 84%, rgba(255, 255, 255, 0.08), transparent 18%);
   }
 
   .hero-content {
     position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 var(--pad-page) clamp(4rem, 10vh, 8rem);
-    max-width: 1600px;
-    margin: 0 auto;
+    z-index: 1;
+    min-height: 100svh;
+    display: grid;
+    align-items: end;
+    padding: clamp(7rem, 12vw, 9rem) var(--pad) clamp(4rem, 10vh, 6rem);
   }
-  .hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: rise 1.4s var(--ease-luxury) 2.4s forwards;
+
+  .hero-inner {
+    max-width: min(760px, 100%);
   }
-  .hero-eyebrow-line {
-    width: 50px;
-    height: 1px;
-    background: var(--gold);
-  }
-  .hero-eyebrow-text {
-    color: var(--cream-warm);
-    font-size: 11px;
-    letter-spacing: 0.32em;
+
+  .hero-kicker,
+  .section-kicker,
+  .card-kicker,
+  .stat-label,
+  .destination-region,
+  .program-tag,
+  .blog-card-tag,
+  .footer-note,
+  .tiny-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.26em;
     text-transform: uppercase;
-    font-weight: 400;
   }
 
-  .hero-headline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(48px, 8.5vw, 132px);
-    line-height: 0.95;
-    letter-spacing: -0.025em;
-    margin-bottom: 2rem;
-    max-width: 14ch;
-    overflow: hidden;
-  }
-  .hero-headline-line {
-    display: block;
-    transform: translateY(110%);
-    animation: rise-clip 1.6s var(--ease-luxury) forwards;
-  }
-  .hero-headline-line:nth-child(1) { animation-delay: 2.5s; }
-  .hero-headline-line:nth-child(2) { animation-delay: 2.7s; }
-  .hero-headline-line em {
-    font-style: italic;
-    color: var(--gold-soft);
-  }
-
-  .hero-sub {
-    max-width: 38ch;
-    font-size: clamp(15px, 1.2vw, 17px);
-    line-height: 1.6;
-    font-weight: 300;
-    color: rgba(244, 236, 221, 0.85);
-    margin-bottom: 3rem;
-    opacity: 0;
-    animation: rise 1.4s var(--ease-luxury) 3.3s forwards;
-  }
-
-  .hero-cta-row {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: rise 1.4s var(--ease-luxury) 3.6s forwards;
-  }
-  .btn-ghost {
+  .hero-kicker {
     display: inline-flex;
     align-items: center;
-    gap: 1.2rem;
-    padding: 1.1rem 2rem;
-    border: 1px solid var(--cream);
-    border-radius: 100px;
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
+    gap: 0.9rem;
+    margin-bottom: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .hero-kicker::before {
+    content: '';
+    width: 56px;
+    height: 1px;
+    background: var(--gold-soft);
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    line-height: 0.88;
+    letter-spacing: -0.055em;
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  .hero-title em,
+  .section-title em,
+  .service-title em,
+  .journal-title em,
+  .inquiry-title em,
+  .about-title em,
+  .program-title em {
+    color: var(--gold-soft);
+    font-style: italic;
+  }
+
+  .hero-copy {
+    max-width: 40rem;
+    font-size: clamp(1.02rem, 1.45vw, 1.2rem);
+    line-height: 1.72;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 2.2rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .hero-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .pill-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.66rem;
+  }
+
+  .hero-aside {
+    position: absolute;
+    right: var(--pad);
+    bottom: clamp(3rem, 8vh, 4rem);
+    z-index: 1;
+    width: min(360px, 32vw);
+    padding: 1.3rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-deep);
+  }
+
+  .hero-aside h3 {
+    font-family: var(--serif);
+    font-size: 1.85rem;
     font-weight: 400;
-    transition: background 500ms var(--ease-luxury), color 500ms var(--ease-luxury), padding 500ms var(--ease-luxury);
-    position: relative;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-aside p {
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 1rem;
+    font-size: 0.96rem;
+  }
+
+  .hero-aside-list {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .hero-aside-list li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.82);
+    padding-top: 0.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.84rem;
+  }
+
+  .section {
+    padding: clamp(5rem, 10vw, 8rem) var(--pad);
+  }
+
+  .section-shell {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .intro {
+    background: linear-gradient(180deg, var(--sand), #efe5d5);
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: center;
+  }
+
+  .section-title,
+  .about-title,
+  .inquiry-title,
+  .journal-title,
+  .program-title {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  .section-copy,
+  .about-copy,
+  .journal-copy,
+  .inquiry-copy,
+  .program-copy,
+  .destination-copy,
+  .service-copy {
+    font-size: 1rem;
+    line-height: 1.72;
+    color: var(--ink-2);
+  }
+
+  .intro-stats {
+    display: grid;
+    gap: 1px;
+    background: var(--line-dark);
+    border-radius: 1.5rem;
     overflow: hidden;
   }
-  .btn-ghost::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--cream);
-    transform: translateY(100%);
-    transition: transform 600ms var(--ease-luxury);
-    z-index: 0;
-  }
-  .btn-ghost > * { position: relative; z-index: 1; }
-  .btn-ghost:hover { color: var(--ink); padding: 1.1rem 2.3rem; }
-  .btn-ghost:hover::before { transform: translateY(0); }
-  .btn-ghost .arrow {
-    width: 18px; height: 1px; background: currentColor; position: relative;
-    transition: width 500ms var(--ease-luxury);
-  }
-  .btn-ghost .arrow::after {
-    content: '';
-    position: absolute;
-    right: 0; top: -3px;
-    width: 8px; height: 8px;
-    border-top: 1px solid currentColor;
-    border-right: 1px solid currentColor;
-    transform: rotate(45deg);
-  }
-  .btn-ghost:hover .arrow { width: 26px; }
 
-  .hero-scroll-hint {
-    position: absolute;
-    bottom: 2rem; left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 10px;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--cream-warm);
-    opacity: 0;
-    animation: rise 1.4s var(--ease-luxury) 4s forwards;
-  }
-  .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(180deg, transparent 0%, var(--cream) 50%, transparent 100%);
-    background-size: 100% 200%;
-    background-position: 0% 0%;
-    animation: scroll-pulse 2.4s ease-in-out infinite;
-  }
-  @keyframes scroll-pulse {
-    0% { background-position: 0% -100%; }
-    100% { background-position: 0% 200%; }
+  .intro-stat {
+    background: rgba(255, 255, 255, 0.52);
+    padding: 1.35rem 1.3rem;
   }
 
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes rise-clip {
-    to { transform: translateY(0); }
-  }
-
-  .hero-meta {
-    position: absolute;
-    top: 50%;
-    right: var(--pad-page);
-    transform: translateY(-50%) rotate(90deg);
-    transform-origin: right center;
-    font-size: 10px;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--cream-warm);
-    opacity: 0;
-    animation: rise 1.4s var(--ease-luxury) 4s forwards;
-  }
-
-  /* ---------- BREATH SECTIONS ---------- */
-  .breath {
-    padding: clamp(5rem, 14vh, 11rem) var(--pad-page);
-    text-align: center;
-    background: var(--cream);
-  }
-  .breath-eyebrow {
-    color: var(--stone);
-    margin-bottom: 2rem;
-  }
-  .breath-text {
+  .intro-stat strong,
+  .stat-num {
+    display: block;
     font-family: var(--serif);
-    font-size: clamp(28px, 4vw, 52px);
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: -0.015em;
-    max-width: 22ch;
-    margin: 0 auto;
-    color: var(--ink);
-  }
-  .breath-text em { font-style: italic; color: var(--gold); }
-  .breath-divider {
-    width: 1px; height: 60px;
-    background: var(--ink);
-    opacity: 0.2;
-    margin: 3rem auto 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 0.95;
+    margin-bottom: 0.35rem;
   }
 
-  /* ---------- FOUR WORLDS ---------- */
   .worlds {
     position: relative;
-    height: 100vh;
-    min-height: 700px;
+    min-height: 90svh;
+    color: var(--white);
     overflow: hidden;
-    color: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .worlds-media {
+
+  .worlds-media,
+  .worlds-media img {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .worlds-media img {
     object-fit: cover;
   }
+
   .worlds-media::after {
     content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(20,17,13,0.4) 0%, rgba(20,17,13,0.25) 50%, rgba(20,17,13,0.55) 100%);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 13, 18, 0.24), rgba(8, 13, 18, 0.7) 100%);
   }
+
   .worlds-content {
     position: relative;
     z-index: 1;
+    min-height: 90svh;
+    display: grid;
+    place-items: center;
     text-align: center;
-    padding: 0 var(--pad-page);
+    padding: var(--pad);
   }
-  .worlds-headline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(56px, 11vw, 180px);
-    line-height: 0.95;
-    letter-spacing: -0.03em;
-  }
-  .worlds-headline .line { display: block; overflow: hidden; }
-  .worlds-headline .line > span {
-    display: inline-block;
-    transform: translateY(110%);
-    transition: transform 1.6s var(--ease-luxury);
-  }
-  .worlds.in-view .worlds-headline .line:nth-child(1) > span { transform: translateY(0); transition-delay: 0.1s; }
-  .worlds.in-view .worlds-headline .line:nth-child(2) > span { transform: translateY(0); transition-delay: 0.3s; }
-  .worlds-headline em { font-style: italic; color: var(--gold-soft); }
-  .worlds-dot { color: var(--gold); }
-  .worlds-regions {
-    margin-top: 3rem;
-    font-size: 11px;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    color: var(--cream-warm);
-    opacity: 0;
-    transition: opacity 1.2s var(--ease-luxury) 0.8s;
-  }
-  .worlds.in-view .worlds-regions { opacity: 1; }
 
-  /* ---------- DESTINATIONS ---------- */
-  .destinations {
-    padding: clamp(5rem, 12vh, 9rem) 0 clamp(4rem, 10vh, 7rem);
-    background: var(--cream);
+  .worlds-title {
+    font-family: var(--serif);
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
   }
+
+  .worlds-regions {
+    margin-top: 1.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+  }
+
+  .destination-grid,
+  .service-stack,
+  .program-grid,
+  .journal-grid,
+  .footer-grid {
+    display: grid;
+    gap: clamp(1.25rem, 2vw, 2rem);
+  }
+
   .section-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 0 var(--pad-page);
-    margin-bottom: clamp(3rem, 7vh, 5rem);
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
     flex-wrap: wrap;
-    gap: 2rem;
   }
-  .section-title {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(36px, 5vw, 72px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    max-width: 14ch;
-  }
-  .section-title em { font-style: italic; color: var(--gold); }
+
   .section-meta {
-    text-align: right;
-    color: var(--stone);
-    max-width: 28ch;
-  }
-  .section-meta .eyebrow { color: var(--ink); display: block; margin-bottom: 0.8rem; }
-
-  .dest-grid {
+    max-width: 28rem;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
-    padding: 0 var(--pad-page);
+    gap: 0.7rem;
+    color: var(--stone);
   }
-  .dest-card {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: var(--ink);
-    overflow: hidden;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1.2s var(--ease-luxury), transform 1.2s var(--ease-luxury);
-  }
-  .dest-card.in-view { opacity: 1; transform: translateY(0); }
-  .dest-card:nth-child(1) { grid-column: 1 / span 7; transition-delay: 0.1s; }
-  .dest-card:nth-child(2) { grid-column: 8 / span 5; margin-top: 6rem; transition-delay: 0.25s; }
-  .dest-card:nth-child(3) { grid-column: 2 / span 5; margin-top: 2rem; transition-delay: 0.1s; }
-  .dest-card:nth-child(4) { grid-column: 7 / span 6; margin-top: 8rem; transition-delay: 0.25s; }
 
-  .dest-image {
+  .destination-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .destination-card {
+    display: grid;
+    gap: 1.1rem;
+    color: var(--ink);
+  }
+
+  .destination-card:nth-child(1) {
+    grid-column: 1 / span 7;
+  }
+
+  .destination-card:nth-child(2) {
+    grid-column: 8 / span 5;
+    margin-top: 4rem;
+  }
+
+  .destination-card:nth-child(3) {
+    grid-column: 2 / span 5;
+    margin-top: 1rem;
+  }
+
+  .destination-card:nth-child(4) {
+    grid-column: 7 / span 6;
+    margin-top: 5rem;
+  }
+
+  .destination-image {
     position: relative;
+    border-radius: 1.7rem;
     overflow: hidden;
     aspect-ratio: 4 / 5;
-    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
   }
-  .dest-card:nth-child(1) .dest-image,
-  .dest-card:nth-child(4) .dest-image { aspect-ratio: 5 / 4; }
 
-  .dest-image img {
-    width: 100%; height: 100%;
+  .destination-card:nth-child(1) .destination-image,
+  .destination-card:nth-child(4) .destination-image {
+    aspect-ratio: 5 / 4;
+  }
+
+  .destination-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: scale(1.02);
-    transition: transform 1.6s var(--ease-luxury), filter 1.2s var(--ease-luxury);
-    filter: saturate(0.95) brightness(0.98);
+    transition: transform 900ms var(--ease), filter 900ms var(--ease);
   }
-  .dest-card:hover .dest-image img {
-    transform: scale(1.08);
-    filter: saturate(1.05) brightness(1.02);
-  }
-  .dest-image::after {
+
+  .destination-image::after {
     content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(20,17,13,0.45) 100%);
-    opacity: 0;
-    transition: opacity 600ms var(--ease-luxury);
-  }
-  .dest-card:hover .dest-image::after { opacity: 1; }
-
-  .dest-overlay-num {
     position: absolute;
-    top: 1.5rem; left: 1.5rem;
-    font-family: var(--serif);
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--cream);
-    letter-spacing: 0.3em;
-    z-index: 2;
-    opacity: 0.85;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 48%, rgba(8, 12, 16, 0.68) 100%);
   }
-  .dest-overlay-view {
-    position: absolute;
-    bottom: 1.5rem; right: 1.5rem;
-    color: var(--cream);
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 500ms var(--ease-luxury), transform 500ms var(--ease-luxury);
-  }
-  .dest-card:hover .dest-overlay-view { opacity: 1; transform: translateX(0); }
 
-  .dest-meta-top {
+  .destination-card:hover .destination-image img {
+    transform: scale(1.08);
+    filter: saturate(1.06);
+  }
+
+  .destination-overlay {
+    position: absolute;
+    inset: 1.2rem 1.2rem auto;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.6rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--line-ink);
-  }
-  .dest-name {
-    font-family: var(--serif);
-    font-size: clamp(28px, 3vw, 40px);
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -0.015em;
-  }
-  .dest-region {
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--stone);
-  }
-  .dest-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    font-weight: 300;
-    color: var(--ink-soft);
-    max-width: 44ch;
-    margin-bottom: 0.8rem;
-  }
-  .dest-tags {
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--stone);
+    align-items: start;
+    gap: 1rem;
+    color: var(--white);
   }
 
-  /* ---------- SERVICES ---------- */
+  .destination-number {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .destination-view {
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .destination-meta {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .destination-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--line-dark);
+  }
+
+  .destination-head h3,
+  .service-title,
+  .program-card h3,
+  .journal-card h3 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+  }
+
+  .destination-copy {
+    color: var(--ink-2);
+  }
+
+  .destination-tags,
+  .program-meta,
+  .journal-meta {
+    color: var(--stone);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
   .services {
     background: var(--ink);
-    color: var(--cream);
-    padding: clamp(5rem, 12vh, 9rem) 0;
-    overflow: hidden;
+    color: var(--white);
   }
-  .services .section-title { color: var(--cream); }
-  .services .section-meta { color: var(--stone-soft); }
-  .services .section-meta .eyebrow { color: var(--cream); }
-  .services .breath-divider { background: var(--cream); }
 
-  .service {
+  .services .section-copy,
+  .services .section-meta,
+  .services .service-copy,
+  .services .service-features li {
+    color: rgba(255, 255, 255, 0.74);
+  }
+
+  .service-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
+    gap: clamp(1.5rem, 2vw, 2rem);
     align-items: center;
-    padding: clamp(3rem, 8vh, 6rem) var(--pad-page);
-    position: relative;
-  }
-  .service:not(:last-child) {
-    border-bottom: 1px solid rgba(245, 236, 221, 0.08);
-  }
-  .service-image {
-    grid-column: 1 / span 6;
-    aspect-ratio: 5 / 4;
-    overflow: hidden;
-    position: relative;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.2s var(--ease-luxury), transform 1.2s var(--ease-luxury);
-  }
-  .service.in-view .service-image { opacity: 1; transform: translateY(0); }
-  .service-image img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transform: scale(1.05);
-    transition: transform 8s var(--ease-luxury);
-  }
-  .service:hover .service-image img { transform: scale(1.12); }
-
-  .service-content {
-    grid-column: 8 / span 4;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.2s var(--ease-luxury) 0.2s, transform 1.2s var(--ease-luxury) 0.2s;
-  }
-  .service.in-view .service-content { opacity: 1; transform: translateY(0); }
-  .service.reverse .service-image { grid-column: 7 / span 6; order: 2; }
-  .service.reverse .service-content { grid-column: 1 / span 5; }
-
-  .service-num {
-    font-family: var(--serif);
-    font-style: italic;
-    color: var(--gold);
-    font-size: 18px;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-  }
-  .service-title {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(32px, 3.8vw, 56px);
-    line-height: 1.05;
-    letter-spacing: -0.015em;
-    margin-bottom: 1.5rem;
-  }
-  .service-title em { font-style: italic; color: var(--gold-soft); }
-  .service-desc {
-    color: rgba(244, 236, 221, 0.75);
-    margin-bottom: 2rem;
-    max-width: 38ch;
-  }
-  .service-features {
-    list-style: none;
-    margin-bottom: 2.5rem;
-  }
-  .service-features li {
-    padding: 0.7rem 0;
-    border-top: 1px solid rgba(245, 236, 221, 0.1);
-    font-size: 13px;
-    color: rgba(244, 236, 221, 0.85);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    letter-spacing: 0.02em;
-  }
-  .service-features li:last-child { border-bottom: 1px solid rgba(245, 236, 221, 0.1); }
-  .service-features .num {
-    font-family: var(--serif);
-    font-style: italic;
-    color: var(--gold);
-    font-size: 14px;
-  }
-  .service-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid var(--gold);
-    transition: gap 400ms var(--ease-luxury);
-  }
-  .service-link:hover { gap: 1.5rem; }
-  .service-link .arrow {
-    width: 16px; height: 1px; background: currentColor; position: relative;
-  }
-  .service-link .arrow::after {
-    content: '';
-    position: absolute;
-    right: 0; top: -3px;
-    width: 7px; height: 7px;
-    border-top: 1px solid currentColor;
-    border-right: 1px solid currentColor;
-    transform: rotate(45deg);
+    padding: clamp(2rem, 4vw, 3rem) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* ---------- ABOUT ---------- */
-  .about {
-    padding: clamp(5rem, 13vh, 10rem) var(--pad-page);
-    background: var(--cream);
-    overflow: hidden;
+  .service-card:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-  .about-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: clamp(2rem, 4vw, 5rem);
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-  .about-left {
-    grid-column: 1 / span 5;
-    position: sticky;
-    top: 8rem;
-    align-self: start;
-  }
-  .about-right {
+
+  .service-card:nth-child(even) .service-visual {
+    order: 2;
     grid-column: 7 / span 6;
   }
-  .about-portrait {
-    aspect-ratio: 4 / 5;
+
+  .service-card:nth-child(even) .service-body {
+    order: 1;
+    grid-column: 1 / span 5;
+  }
+
+  .service-visual {
+    grid-column: 1 / span 6;
+    position: relative;
+    border-radius: 1.8rem;
     overflow: hidden;
-    margin-bottom: 2rem;
-    filter: grayscale(20%);
+    aspect-ratio: 5 / 4;
+    box-shadow: var(--shadow-deep);
   }
-  .about-portrait img {
-    width: 100%; height: 100%;
+
+  .service-visual img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: transform 8s var(--ease-luxury);
+    transition: transform 1.2s var(--ease);
   }
-  .about-portrait:hover img { transform: scale(1.05); }
+
+  .service-card:hover .service-visual img {
+    transform: scale(1.08);
+  }
+
+  .service-body {
+    grid-column: 8 / span 4;
+  }
+
+  .service-index {
+    color: var(--gold-soft);
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-copy {
+    margin: 1rem 0 1.5rem;
+  }
+
+  .service-features {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-features li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .programs {
+    background: linear-gradient(180deg, #f0e7d7, var(--sand));
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .program-card,
+  .journal-card,
+  .about-panel,
+  .info-card,
+  .contact-card,
+  .footer-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(13, 19, 24, 0.08);
+    border-radius: 1.6rem;
+    box-shadow: var(--shadow);
+  }
+
+  .program-card {
+    overflow: hidden;
+    display: grid;
+  }
+
+  .program-card img {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+  }
+
+  .program-card-body {
+    display: grid;
+    gap: 0.85rem;
+    padding: 1.4rem;
+  }
+
+  .colombia-peru {
+    background: var(--ink);
+    color: var(--white);
+  }
+
+  .region-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+    gap: clamp(1.5rem, 3vw, 3rem);
+    align-items: center;
+  }
+
+  .region-panel {
+    padding: clamp(1.4rem, 3vw, 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.8rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+  }
+
+  .region-highlights {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1.3rem;
+  }
+
+  .region-highlights div {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .journal-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+
+  .journal-card {
+    overflow: hidden;
+  }
+
+  .journal-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+  }
+
+  .journal-card-body {
+    display: grid;
+    gap: 0.9rem;
+    padding: 1.6rem;
+  }
+
+  .about {
+    background: var(--sand);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: clamp(1.5rem, 4vw, 4rem);
+    align-items: start;
+  }
+
+  .about-visual {
+    position: sticky;
+    top: 7rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .about-image {
+    border-radius: 1.8rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-deep);
+    aspect-ratio: 4 / 5;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .about-caption {
+    color: var(--stone);
     font-family: var(--serif);
     font-style: italic;
-    font-size: 15px;
-    color: var(--stone);
-    font-weight: 300;
+    font-size: 1rem;
   }
 
-  .about-eyebrow { color: var(--stone); margin-bottom: 2rem; }
-  .about-headline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(36px, 4.5vw, 64px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 2.5rem;
+  .about-copy {
+    display: grid;
+    gap: 1.1rem;
   }
-  .about-headline em { font-style: italic; color: var(--gold); }
-  .about-body p {
-    font-size: clamp(15px, 1.15vw, 17px);
-    line-height: 1.75;
-    color: var(--ink-soft);
-    margin-bottom: 1.5rem;
-    max-width: 50ch;
-  }
-  .about-body p strong {
-    font-weight: 400;
-    color: var(--ink);
-  }
+
   .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1px;
-    margin-top: 4rem;
-    background: var(--line-ink);
-    border-top: 1px solid var(--line-ink);
-    border-bottom: 1px solid var(--line-ink);
-  }
-  .stat {
-    background: var(--cream);
-    padding: 2rem 1rem 2rem 0;
-  }
-  .stat-num {
-    font-family: var(--serif);
-    font-size: clamp(36px, 4vw, 56px);
-    font-weight: 300;
-    line-height: 1;
-    color: var(--ink);
-    margin-bottom: 0.6rem;
-    letter-spacing: -0.02em;
-  }
-  .stat-num em { font-style: italic; color: var(--gold); }
-  .stat-label {
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--stone);
-  }
-  .stat:not(:first-child) { padding-left: 2rem; }
-
-  /* ---------- INQUIRY ---------- */
-  .inquiry {
-    position: relative;
-    padding: clamp(6rem, 14vh, 11rem) var(--pad-page);
-    background: var(--ink);
-    color: var(--cream);
+    margin-top: 2rem;
+    background: var(--line-dark);
+    border-radius: 1.4rem;
     overflow: hidden;
   }
+
+  .about-stats .intro-stat {
+    background: rgba(255, 255, 255, 0.56);
+  }
+
+  .inquiry {
+    position: relative;
+    color: var(--white);
+    background: linear-gradient(180deg, rgba(9, 14, 18, 0.96), rgba(9, 14, 18, 0.98));
+    overflow: hidden;
+  }
+
   .inquiry::before {
     content: '';
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(ellipse at top left, rgba(184, 155, 94, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom right, rgba(184, 155, 94, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  .inquiry-inner {
-    position: relative;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .inquiry-eyebrow {
-    color: var(--gold);
-    margin-bottom: 2rem;
-  }
-  .inquiry-headline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(40px, 6.5vw, 96px);
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    margin-bottom: 2.5rem;
-  }
-  .inquiry-headline em { font-style: italic; color: var(--gold-soft); }
-  .inquiry-sub {
-    max-width: 50ch;
-    margin: 0 auto 4rem;
-    color: rgba(244, 236, 221, 0.75);
-    font-size: clamp(15px, 1.15vw, 17px);
-    line-height: 1.7;
+    background: radial-gradient(circle at top left, rgba(184, 155, 94, 0.14), transparent 38%), radial-gradient(circle at bottom right, rgba(184, 155, 94, 0.08), transparent 34%);
   }
 
-  .inquiry-steps {
+  .inquiry-shell {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    text-align: left;
-    margin-bottom: 4rem;
-    border-top: 1px solid rgba(245, 236, 221, 0.12);
-    border-bottom: 1px solid rgba(245, 236, 221, 0.12);
-  }
-  .step {
-    padding: 2.5rem 2rem 2.5rem 0;
-    position: relative;
-  }
-  .step:not(:last-child) {
-    border-right: 1px solid rgba(245, 236, 221, 0.12);
-  }
-  .step:not(:first-child) {
-    padding-left: 2rem;
-  }
-  .step-num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 16px;
-    color: var(--gold);
-    margin-bottom: 1rem;
-  }
-  .step-title {
-    font-family: var(--serif);
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 0.6rem;
-    letter-spacing: -0.01em;
-  }
-  .step-desc {
-    font-size: 13px;
-    color: rgba(244, 236, 221, 0.65);
-    line-height: 1.5;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 460px);
+    gap: clamp(1.5rem, 4vw, 4rem);
+    align-items: start;
   }
 
-  .inquiry-cta-row {
+  .inquiry-copy,
+  .inquiry-copy p,
+  .inquiry-copy li {
+    color: rgba(255, 255, 255, 0.76);
+  }
+
+  .inquiry-copy ul {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.4rem 0 1.8rem;
+  }
+
+  .inquiry-copy li {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
+    align-items: start;
+    gap: 0.75rem;
   }
-  .btn-gold {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.2rem;
-    padding: 1.3rem 2.5rem;
-    background: var(--gold);
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 100px;
-    border: 1px solid var(--gold);
-    transition: padding 500ms var(--ease-luxury), background 500ms var(--ease-luxury);
-    position: relative;
-    overflow: hidden;
-  }
-  .btn-gold::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--gold-soft);
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform 600ms var(--ease-luxury);
-  }
-  .btn-gold > * { position: relative; z-index: 1; }
-  .btn-gold:hover::before { transform: scaleX(1); }
-  .btn-gold:hover { padding: 1.3rem 2.8rem; }
-  .btn-gold .arrow { width: 18px; height: 1px; background: currentColor; position: relative; transition: width 500ms var(--ease-luxury); }
-  .btn-gold .arrow::after {
-    content: '';
-    position: absolute;
-    right: 0; top: -3px;
-    width: 8px; height: 8px;
-    border-top: 1px solid currentColor;
-    border-right: 1px solid currentColor;
-    transform: rotate(45deg);
-  }
-  .btn-gold:hover .arrow { width: 26px; }
 
-  .inquiry-direct {
-    font-size: 13px;
-    color: rgba(244, 236, 221, 0.6);
+  .inquiry-copy li::before {
+    content: '•';
+    color: var(--gold-soft);
   }
-  .inquiry-direct a {
-    color: var(--cream);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(245, 236, 221, 0.3);
-    transition: border-color 300ms;
-  }
-  .inquiry-direct a:hover { border-color: var(--gold); }
 
-  /* ---------- FOOTER ---------- */
-  .footer {
-    background: var(--cream);
-    color: var(--ink);
-    padding: clamp(4rem, 10vh, 7rem) var(--pad-page) 2rem;
+  .contact-card {
+    padding: 1.35rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    backdrop-filter: blur(14px);
   }
-  .footer-grid {
+
+  .contact-card form {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 3rem;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid var(--line-ink);
+    gap: 0.85rem;
   }
-  .footer-brand {
-    grid-column: 1 / span 4;
-  }
-  .footer-mark {
-    font-family: var(--serif);
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 0.32em;
-    margin-bottom: 1.5rem;
-  }
-  .footer-mark .dot { color: var(--gold); }
-  .footer-tagline {
-    font-family: var(--serif);
-    font-style: italic;
-    color: var(--stone);
-    font-size: 16px;
-    max-width: 28ch;
-    font-weight: 300;
-  }
-  .footer-col {
-    grid-column: span 2;
-  }
-  .footer-col h4 {
-    font-size: 10px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    color: var(--stone);
-    font-weight: 500;
-  }
-  .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 0.8rem; }
-  .footer-col a {
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 300;
-    transition: color 300ms, padding-left 400ms var(--ease-luxury);
-    position: relative;
-  }
-  .footer-col a:hover { color: var(--gold); padding-left: 0.6rem; }
-  .footer-col a::before {
-    content: '→';
-    position: absolute;
-    left: -0.4rem;
-    opacity: 0;
-    transition: opacity 400ms, left 400ms var(--ease-luxury);
-  }
-  .footer-col a:hover::before { opacity: 1; left: -0.8rem; }
 
-  .footer-contact {
-    grid-column: 9 / span 4;
+  .contact-card input,
+  .contact-card select,
+  .contact-card textarea {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--white);
+    padding: 0.9rem 1rem;
+    outline: 0;
   }
-  .footer-contact h4 {
-    font-size: 10px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    color: var(--stone);
-    font-weight: 500;
+
+  .contact-card input::placeholder,
+  .contact-card textarea::placeholder {
+    color: rgba(255, 255, 255, 0.46);
   }
-  .footer-contact p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    margin-bottom: 1rem;
-    font-weight: 300;
+
+  .contact-card textarea {
+    min-height: 120px;
+    resize: vertical;
   }
-  .footer-contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-ink); transition: border-color 300ms; }
-  .footer-contact a:hover { border-color: var(--gold); }
+
+  .contact-actions,
+  .footer-social,
+  .footer-legal,
+  .floating-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .footer {
+    background: #f1e8da;
+    color: var(--ink);
+    padding: clamp(4rem, 8vw, 6rem) var(--pad) 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 0.7fr)) minmax(280px, 0.9fr);
+    align-items: start;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--line-dark);
+  }
+
+  .footer-brand {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .footer-logo img {
+    filter: brightness(0.2) contrast(1.05);
+  }
+
+  .footer-copy,
+  .footer-contact p,
+  .footer-base {
+    color: var(--ink-2);
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .footer-col a,
+  .footer-contact a,
+  .footer-base a {
+    color: var(--ink-2);
+    transition: color 250ms var(--ease), opacity 250ms var(--ease);
+  }
+
+  .footer-col a:hover,
+  .footer-contact a:hover,
+  .footer-base a:hover {
+    color: var(--gold);
+  }
 
   .footer-base {
-    max-width: 1500px;
-    margin: 2rem auto 0;
+    max-width: 1440px;
+    margin: 1.5rem auto 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 1rem;
-    font-size: 11px;
-    color: var(--stone);
-    letter-spacing: 0.05em;
-  }
-  .footer-legal {
-    display: flex;
-    gap: 2rem;
-  }
-  .footer-legal a {
-    color: var(--stone);
-    text-decoration: none;
-    transition: color 300ms;
-  }
-  .footer-legal a:hover { color: var(--ink); }
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 1024px) {
-    .nav-burger-label { display: none; }
-    .menu-inner { grid-template-columns: 1fr; }
-    .menu-right { display: none; }
-
-    .dest-grid { gap: 1.5rem; }
-    .dest-card:nth-child(1) { grid-column: 1 / -1; }
-    .dest-card:nth-child(2) { grid-column: 1 / -1; margin-top: 2rem; }
-    .dest-card:nth-child(3) { grid-column: 1 / -1; margin-top: 2rem; }
-    .dest-card:nth-child(4) { grid-column: 1 / -1; margin-top: 2rem; }
-
-    .service-image, .service-content,
-    .service.reverse .service-image, .service.reverse .service-content {
-      grid-column: 1 / -1;
-      order: unset;
-    }
-    .service-content { margin-top: 2rem; }
-
-    .about-left, .about-right { grid-column: 1 / -1; }
-    .about-left { position: static; }
-    .about-portrait { max-width: 500px; margin-bottom: 3rem; }
-
-    .footer-brand { grid-column: 1 / -1; margin-bottom: 1rem; }
-    .footer-col { grid-column: span 4; }
-    .footer-contact { grid-column: 1 / -1; margin-top: 1rem; }
+    flex-wrap: wrap;
+    font-size: 0.8rem;
   }
 
-  @media (max-width: 720px) {
-    :root { --pad-page: 1.25rem; }
-
-    .nav { grid-template-columns: 1fr auto 1fr; }
-    .nav-cta-wrap .nav-cta-text { display: none; }
-    .nav-cta { padding: 0.7rem 1rem; gap: 0.6rem; }
-    .nav-cta .arrow { width: 12px; }
-
-    .hero-content { padding-bottom: 4rem; }
-    .hero-meta { display: none; }
-    .hero-cta-row { gap: 1rem; }
-    .hero-scroll-hint { display: none; }
-
-    .section-header { flex-direction: column; align-items: flex-start; }
-    .section-meta { text-align: left; }
-
-    .dest-card:not(:first-child) { margin-top: 2rem; }
-
-    .inquiry-steps { grid-template-columns: 1fr; }
-    .step { padding: 2rem 0 !important; border-right: none !important; border-bottom: 1px solid rgba(245, 236, 221, 0.12); }
-    .step:last-child { border-bottom: none; }
-    .inquiry-cta-row { flex-direction: column; gap: 1.5rem; }
-
-    .about-stats { grid-template-columns: 1fr; }
-    .stat { padding: 1.5rem 0 !important; }
-
-    .footer-col { grid-column: 1 / -1; margin-bottom: 1rem; }
-    .footer-base { flex-direction: column; align-items: flex-start; }
+  .floating-cta {
+    position: fixed;
+    right: clamp(1rem, 3vw, 2rem);
+    bottom: clamp(1rem, 3vw, 2rem);
+    z-index: 1250;
+    display: grid;
+    gap: 0.7rem;
+    transform: translateY(24px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms var(--ease), transform 250ms var(--ease);
   }
 
-  /* ---------- REVEAL ANIMATIONS ---------- */
+  .floating-cta.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .floating-link {
+    box-shadow: var(--shadow-deep);
+  }
+
   .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.2s var(--ease-luxury), transform 1.2s var(--ease-luxury);
+    transform: translateY(28px);
+    transition: opacity 850ms var(--ease), transform 850ms var(--ease);
   }
-  .reveal.in-view {
+
+  .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
   }
+
+  @media (max-width: 1180px) {
+    .menu-shell,
+    .intro-grid,
+    .journal-grid,
+    .region-shell,
+    .inquiry-shell,
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .menu-card {
+      min-height: 320px;
+    }
+
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-aside {
+      position: static;
+      width: min(100%, 420px);
+      margin-top: 1.5rem;
+    }
+
+    .destination-card,
+    .destination-card:nth-child(1),
+    .destination-card:nth-child(2),
+    .destination-card:nth-child(3),
+    .destination-card:nth-child(4) {
+      grid-column: 1 / -1;
+      margin-top: 0;
+    }
+
+    .service-card,
+    .service-card:nth-child(even) .service-visual,
+    .service-card:nth-child(even) .service-body,
+    .service-visual,
+    .service-body {
+      grid-column: 1 / -1;
+    }
+
+    .service-card:nth-child(even) .service-visual,
+    .service-card:nth-child(even) .service-body {
+      order: initial;
+    }
+
+    .program-grid,
+    .footer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-visual {
+      position: static;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .nav {
+      grid-template-columns: auto 1fr auto;
+      gap: 0.75rem;
+    }
+
+    .nav-toggle-label,
+    .nav-cta-wrap .button-secondary span:first-child,
+    .hero-aside,
+    .menu-card {
+      display: none;
+    }
+
+    .nav-logo img,
+    .menu-brand img,
+    .footer-logo img {
+      max-height: 42px;
+    }
+
+    .hero-content {
+      padding-top: 6rem;
+    }
+
+    .hero-title,
+    .worlds-title {
+      font-size: clamp(3rem, 13vw, 4.8rem);
+    }
+
+    .hero-copy,
+    .section-copy,
+    .about-copy,
+    .journal-copy,
+    .inquiry-copy,
+    .destination-copy,
+    .service-copy,
+    .program-copy {
+      font-size: 0.98rem;
+    }
+
+    .hero-actions,
+    .hero-meta-row,
+    .contact-actions,
+    .floating-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .button,
+    .button-secondary,
+    .button-ghost,
+    .pill-link,
+    .floating-link {
+      width: 100%;
+    }
+
+    .program-grid,
+    .footer-grid,
+    .about-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .menu-panel {
+      padding-top: 1.2rem;
+    }
+
+    .menu-link-text strong {
+      font-size: clamp(1.65rem, 9vw, 2.6rem);
+    }
+
+    .destination-head,
+    .section-header,
+    .footer-base {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
 </style>
 </head>
-<body>
+<body id="top">
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
-<!-- LOADER -->
-<div class="loader" id="loader">
-  <div class="loader-mark">
-    <span>M</span><span>·</span><span>T</span><span>·</span><span>E</span><span>C</span>
-  </div>
+<div class="loader" id="loader" aria-hidden="true">
+  <img class="loader-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-L2aP_gJjbsW5ssGTIQD2Szkd0XsihWNZwA&s" alt="My Tour EC logo">
 </div>
 
-<!-- NAVBAR -->
-<nav class="nav" id="nav">
-  <button class="nav-burger" id="menuOpen" aria-label="Open menu">
-    <div class="burger-lines">
-      <span></span>
-      <span></span>
-    </div>
-    <div class="nav-burger-label">Menu</div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <button class="nav-toggle" id="menuOpen" aria-label="Open menu" aria-expanded="false" aria-controls="menuOverlay">
+    <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span></span>
+    <span class="nav-toggle-label">Menu</span>
   </button>
 
-  <a href="#" class="nav-mark">M&middot;T<span class="dot">·</span>EC</a>
+  <a class="nav-logo" href="/en" aria-label="My Tour EC home">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-L2aP_gJjbsW5ssGTIQD2Szkd0XsihWNZwA&s" alt="My Tour EC">
+  </a>
 
   <div class="nav-cta-wrap">
-    <a href="#inquiry" class="nav-cta">
-      <span class="nav-cta-text">Begin Your Journey</span>
-      <span class="arrow"></span>
+    <a class="button-secondary" href="#inquiry">
+      <span>Planifica tu viaje</span>
+      <span class="arrow" aria-hidden="true"></span>
     </a>
   </div>
 </nav>
 
-<!-- FULLSCREEN MENU -->
-<div class="menu-overlay" id="menuOverlay">
-  <div class="menu-bg"></div>
-  <button class="menu-close" id="menuClose">
-    <span>Close</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-      <line x1="4" y1="4" x2="20" y2="20"/>
-      <line x1="20" y1="4" x2="4" y2="20"/>
-    </svg>
-  </button>
-  <div class="menu-inner">
-    <div class="menu-left">
-      <div class="menu-nav" id="menuNav">
-        <a href="#" class="menu-link" data-preview="galapagos"><span class="num">01</span>Atelier</a>
-        <a href="#destinations" class="menu-link" data-preview="andes"><span class="num">02</span>Destinations</a>
-        <a href="#services" class="menu-link" data-preview="yacht"><span class="num">03</span>Journeys</a>
-        <a href="#about" class="menu-link" data-preview="founder"><span class="num">04</span>The Atelier</a>
-        <a href="#inquiry" class="menu-link" data-preview="amazon"><span class="num">05</span>Commission a Journey</a>
-        <a href="#" class="menu-link" data-preview="pacific"><span class="num">06</span>Journal</a>
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-backdrop"></div>
+  <div class="menu-shell">
+    <div class="menu-panel">
+      <div class="menu-top">
+        <a class="menu-brand" href="/en" aria-label="My Tour EC home">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-L2aP_gJjbsW5ssGTIQD2Szkd0XsihWNZwA&s" alt="My Tour EC">
+        </a>
+        <button class="menu-close" id="menuClose" aria-label="Close menu">
+          <span>Cerrar</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg>
+        </button>
       </div>
-      <div class="menu-footer">
-        <div class="menu-contact">
-          <a href="mailto:info@mytourec.com">info@mytourec.com</a>
-          <a href="tel:+5939921 7343">+ 593 99 921 7343</a>
-          <a href="tel:+13058468308">+ 1 305 846 8308</a>
+
+      <div class="menu-search">
+        <div class="menu-search-head">
+          <span class="menu-search-label">Search</span>
+          <button class="menu-search-button" id="focusSearch" type="button">Open Search</button>
         </div>
-        <div class="menu-locale">
-          <button class="active">EN</button>
-          <button>ES</button>
+        <div class="menu-search-box">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <input id="menuSearchInput" type="search" placeholder="Search destinations, services, programs or contact" aria-label="Search site content">
         </div>
+        <div class="search-results" id="searchResults"></div>
       </div>
-    </div>
-    <div class="menu-right" id="menuRight">
-      <div class="menu-preview active" data-key="galapagos">
-        <img src="https://images.unsplash.com/photo-1583309217394-d2bb1ce6c0cd?w=1200&q=85" alt="Galápagos">
-        <div class="menu-preview-label">A South American atelier.</div>
-      </div>
-      <div class="menu-preview" data-key="andes">
-        <img src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1200&q=85" alt="Andes">
-        <div class="menu-preview-label">The Andes, slowly.</div>
-      </div>
-      <div class="menu-preview" data-key="yacht">
-        <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?w=1200&q=85" alt="Yacht">
-        <div class="menu-preview-label">Private yachts, private chefs.</div>
-      </div>
-      <div class="menu-preview" data-key="founder">
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200&q=85" alt="Atelier">
-        <div class="menu-preview-label">Three decades of curation.</div>
-      </div>
-      <div class="menu-preview" data-key="amazon">
-        <img src="https://images.unsplash.com/photo-1516486392848-8b67ef89f113?w=1200&q=85" alt="Amazon">
-        <div class="menu-preview-label">Commission your journey.</div>
-      </div>
-      <div class="menu-preview" data-key="pacific">
-        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1200&q=85" alt="Pacific">
-        <div class="menu-preview-label">Pacific quiet.</div>
+
+      <div class="menu-grid">
+        <div class="menu-nav" id="menuNav">
+          <a class="menu-link" data-preview="galapagos" data-search-target="Inicio Hero Ecuador Galápagos private travel" href="#top">
+            <span class="menu-num">01</span>
+            <span class="menu-link-text"><strong>Inicio</strong><span>Luxury opening</span></span>
+          </a>
+          <a class="menu-link" data-preview="founder" data-search-target="About Us Nosotros atelier founders team" href="#about">
+            <span class="menu-num">02</span>
+            <span class="menu-link-text"><strong>About Us</strong><span>The atelier</span></span>
+          </a>
+          <a class="menu-link" data-preview="andes" data-search-target="Destinations Galapagos Highlands Amazon Pacific" href="#destinations">
+            <span class="menu-num">03</span>
+            <span class="menu-link-text"><strong>Destinations</strong><span>Ecuador's four worlds</span></span>
+          </a>
+          <a class="menu-link" data-preview="yacht" data-search-target="Services Leisure Corporate Weddings" href="#services">
+            <span class="menu-num">04</span>
+            <span class="menu-link-text"><strong>Services</strong><span>Private travel design</span></span>
+          </a>
+          <a class="menu-link" data-preview="yacht" data-search-target="Programs Signature itineraries private departures" href="#programs">
+            <span class="menu-num">05</span>
+            <span class="menu-link-text"><strong>Programs</strong><span>Ready to refine</span></span>
+          </a>
+          <a class="menu-link" data-preview="andes" data-search-target="Colombia Peru cross border journeys" href="#colombia-peru">
+            <span class="menu-num">06</span>
+            <span class="menu-link-text"><strong>Colombia &amp; Peru</strong><span>Regional extensions</span></span>
+          </a>
+          <a class="menu-link" data-preview="pacific" data-search-target="Blog Journal inspiration travel notes" href="#journal">
+            <span class="menu-num">07</span>
+            <span class="menu-link-text"><strong>Blog</strong><span>Editorial travel notes</span></span>
+          </a>
+          <a class="menu-link" data-preview="amazon" data-search-target="Contact contact us inquiry WhatsApp email phone" href="#inquiry">
+            <span class="menu-num">08</span>
+            <span class="menu-link-text"><strong>Contact Us</strong><span>Speak with a travel designer</span></span>
+          </a>
+        </div>
+
+        <div class="menu-side">
+          <div class="menu-card">
+            <div class="menu-preview active" data-key="galapagos">
+              <img src="https://images.unsplash.com/photo-1583309217394-d2bb1ce6c0cd?w=1200&q=85" alt="Galápagos atelier mood" loading="eager" decoding="async">
+              <div class="menu-preview-copy">
+                <h3>Galápagos, privately.</h3>
+                <p>Luxury planning, cinematic departures and a quieter way into the archipelago.</p>
+              </div>
+            </div>
+            <div class="menu-preview" data-key="andes">
+              <img src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1200&q=85" alt="Andes Highlands" loading="lazy" decoding="async">
+              <div class="menu-preview-copy">
+                <h3>Highlands &amp; volcanoes.</h3>
+                <p>Cotopaxi dawns, hacienda dinners and elevated pacing through the Andes.</p>
+              </div>
+            </div>
+            <div class="menu-preview" data-key="yacht">
+              <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?w=1200&q=85" alt="Private yacht journey" loading="lazy" decoding="async">
+              <div class="menu-preview-copy">
+                <h3>Programs at sea.</h3>
+                <p>Private yachts, expedition pacing and journeys composed around access.</p>
+              </div>
+            </div>
+            <div class="menu-preview" data-key="founder">
+              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200&q=85" alt="Atelier founder mood" loading="lazy" decoding="async">
+              <div class="menu-preview-copy">
+                <h3>Thirty years of curation.</h3>
+                <p>An Ecuadorian travel atelier built on access, trust and detail.</p>
+              </div>
+            </div>
+            <div class="menu-preview" data-key="amazon">
+              <img src="https://images.unsplash.com/photo-1516486392848-8b67ef89f113?w=1200&q=85" alt="Amazon inquiry mood" loading="lazy" decoding="async">
+              <div class="menu-preview-copy">
+                <h3>Start with one message.</h3>
+                <p>WhatsApp, phone and email are all ready for fast planning.</p>
+              </div>
+            </div>
+            <div class="menu-preview" data-key="pacific">
+              <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1200&q=85" alt="Pacific journal mood" loading="lazy" decoding="async">
+              <div class="menu-preview-copy">
+                <h3>Editorial inspiration.</h3>
+                <p>Quiet coasts, regional notes and stories worth planning around.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-utilities">
+            <div class="menu-utility-panel">
+              <h4>Language</h4>
+              <div class="menu-language">
+                <a class="lang-link" href="/en" data-language="en">EN</a>
+                <a class="lang-link is-active" href="/es" data-language="es">ES</a>
+              </div>
+            </div>
+
+            <div class="menu-utility-panel menu-contact">
+              <h4>Contact</h4>
+              <div class="contact-list">
+                <a href="tel:+593999217343"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 3.2 4.9 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.7.6 4.1.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10 21.1 2.9 14 2.9 5.2 2.9 4.6 3.4 4 4 4h3.5c.6 0 1.1.5 1.1 1.1 0 1.4.2 2.8.6 4.1.1.4 0 .8-.3 1.2l-2.3 2.4z"></path></svg><span>+593 99 921 7343</span></a>
+                <a href="mailto:info@mytourec.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="M4 7l8 6 8-6"></path></svg><span>info@mytourec.com</span></a>
+                <a href="https://wa.me/593999217343?text=Hola%20My%20Tour%20EC,%20quiero%20planificar%20un%20viaje%20privado." target="_blank" rel="noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.3 11.3 0 0 0 12.1.1 11.4 11.4 0 0 0 .7 11.5c0 2 .5 3.9 1.5 5.6L.1 23l6.1-2a11.2 11.2 0 0 0 5.4 1.4h.1A11.4 11.4 0 0 0 23 11.1c0-3-1.2-5.8-3.5-7.6Zm-8.8 17h-.1a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-3.6 1.2 1.2-3.5-.2-.4a9.5 9.5 0 1 1 7.8 4.2Zm5.2-7.1c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.4-.5-2.6-1.7-1-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2.1-.3 0-.5-.1-.1-.7-1.8-1-2.4-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .2.2 2 3.2 4.8 4.4.7.3 1.2.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.2.2-1.4-.1-.2-.3-.2-.6-.4Z"></path></svg><span>WhatsApp directo</span></a>
+              </div>
+            </div>
+
+            <div class="menu-utility-panel">
+              <h4>Search &amp; Social</h4>
+              <div class="utility-links">
+                <a class="utility-link" href="/en/search">Search</a>
+                <a class="utility-link" href="/en/blog">Blog</a>
+              </div>
+              <div class="social-links">
+                <a class="social-link" href="https://www.instagram.com/mytourec/?hl=es-la" target="_blank" rel="noreferrer" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1"></circle></svg>IG</a>
+                <a class="social-link" href="https://www.facebook.com/MytourecTours" target="_blank" rel="noreferrer" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6H16V3.8c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.3V10H8v3h3.1v8h2.1Z"></path></svg>FB</a>
+                <a class="social-link" href="https://www.linkedin.com/company/mytourec-mice-ecuador/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.6V20h3.3V8.6Zm.2-3.5c0-1.1-.8-1.9-1.9-1.9-1.1 0-1.9.8-1.9 1.9 0 1 .8 1.9 1.9 1.9 1.1 0 1.9-.8 1.9-1.9ZM20.4 20h-3.3v-5.5c0-1.3 0-3-1.8-3-1.8 0-2.1 1.4-2.1 2.9V20H10V8.6h3.2v1.6h.1c.4-.8 1.5-1.8 3.2-1.8 3.4 0 4 2.2 4 5.1V20Z"></path></svg>IN</a>
+                <a class="social-link" href="https://www.youtube.com/@mytourecs.a7325" target="_blank" rel="noreferrer" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2C2 9 2 12 2 12s0 3 .4 4.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9C22 15 22 12 22 12s0-3-.4-4.8ZM10 15.2V8.8l5.2 3.2-5.2 3.2Z"></path></svg>YT</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-media">
-    <img src="https://images.unsplash.com/photo-1583309217394-d2bb1ce6c0cd?w=2400&q=90" alt="Galápagos dawn">
-  </div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-eyebrow-line"></span>
-      <span class="hero-eyebrow-text">Ecuador · Galápagos · Colombia · Peru</span>
+<main id="main">
+  <section class="hero" aria-label="Luxury hero">
+    <div class="hero-media" id="heroMedia">
+      <div class="hero-slide is-active"><img src="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e964b_Web%2014.jpg" alt="Galápagos dawn opening" fetchpriority="high"></div>
+      <div class="hero-slide"><img src="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e9638_Web%2046.jpg" alt="Ecuador luxury landscape"></div>
+      <div class="hero-slide"><img src="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e963d_Web%2047.jpg" alt="South America private travel"></div>
+      <div class="hero-slide"><img src="https://cdn.prod.website-files.com/66fd8fc34e6de57e395e92d7/66fd8fc34e6de57e395e9621_Web%2048.jpg" alt="Cinematic Ecuador journey"></div>
     </div>
-    <h1 class="hero-headline">
-      <span class="hero-headline-line">Four worlds.</span>
-      <span class="hero-headline-line">One <em>private</em> journey.</span>
-    </h1>
-    <p class="hero-sub">
-      Bespoke expeditions across South America's most extraordinary landscapes — curated by Ecuador's pioneering travel atelier.
-    </p>
-    <div class="hero-cta-row">
-      <a href="#inquiry" class="btn-ghost">
-        <span>Begin Your Journey</span>
-        <span class="arrow"></span>
-      </a>
-    </div>
-  </div>
-  <div class="hero-meta">Est. since 1998</div>
-  <div class="hero-scroll-hint">
-    <span>Discover</span>
-    <span class="scroll-line"></span>
-  </div>
-</section>
+    <div class="hero-grain" aria-hidden="true"></div>
 
-<!-- BREATH -->
-<section class="breath">
-  <div class="eyebrow breath-eyebrow">A South American Atelier</div>
-  <p class="breath-text">
-    We design private journeys for travelers who prefer
-    <em>discovery over itinerary.</em>
-  </p>
-  <div class="breath-divider"></div>
-</section>
-
-<!-- FOUR WORLDS -->
-<section class="worlds" id="worlds">
-  <div class="worlds-media">
-    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=2400&q=90" alt="Cotopaxi">
-  </div>
-  <div class="worlds-content">
-    <h2 class="worlds-headline">
-      <span class="line"><span>Four <em>worlds</em>.</span></span>
-      <span class="line"><span>One country<span class="worlds-dot">.</span></span></span>
-    </h2>
-    <div class="worlds-regions">Galápagos &nbsp;·&nbsp; Andes &nbsp;·&nbsp; Amazon &nbsp;·&nbsp; Pacific</div>
-  </div>
-</section>
-
-<!-- DESTINATIONS -->
-<section class="destinations" id="destinations">
-  <div class="section-header reveal">
-    <h2 class="section-title">A portfolio of <em>landscapes</em>.</h2>
-    <div class="section-meta">
-      <span class="eyebrow">Chapters · I — IV</span>
-      <p class="body-s">Each region designed as a private chapter. Few travelers, fewer crowds.</p>
-    </div>
-  </div>
-
-  <div class="dest-grid">
-    <a href="#" class="dest-card">
-      <div class="dest-image">
-        <span class="dest-overlay-num">I</span>
-        <img src="https://images.unsplash.com/photo-1589182337358-2cb63099350c?w=1600&q=85" alt="Galápagos">
-        <div class="dest-overlay-view">View Chapter →</div>
-      </div>
-      <div class="dest-meta-top">
-        <h3 class="dest-name">Galápagos</h3>
-        <span class="dest-region">Archipelago</span>
-      </div>
-      <p class="dest-desc">Where penguins meet flamingos. Seven nights, two yachts, one archipelago. Boarded only by twelve.</p>
-      <div class="dest-tags">07 nights · From USD $14,800 · Year-round</div>
-    </a>
-
-    <a href="#" class="dest-card">
-      <div class="dest-image">
-        <span class="dest-overlay-num">II</span>
-        <img src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1200&q=85" alt="Highlands">
-        <div class="dest-overlay-view">View Chapter →</div>
-      </div>
-      <div class="dest-meta-top">
-        <h3 class="dest-name">Highlands</h3>
-        <span class="dest-region">The Andes</span>
-      </div>
-      <p class="dest-desc">Cotopaxi at dawn. Haciendas at dusk. The Avenue of Volcanoes — slowly.</p>
-      <div class="dest-tags">05 nights · From USD $8,400</div>
-    </a>
-
-    <a href="#" class="dest-card">
-      <div class="dest-image">
-        <span class="dest-overlay-num">III</span>
-        <img src="https://images.unsplash.com/photo-1516486392848-8b67ef89f113?w=1200&q=85" alt="Amazon">
-        <div class="dest-overlay-view">View Chapter →</div>
-      </div>
-      <div class="dest-meta-top">
-        <h3 class="dest-name">Amazon</h3>
-        <span class="dest-region">Yasuní · Napo</span>
-      </div>
-      <p class="dest-desc">Napo River by canoe and canopy. Indigenous guides who have tracked jaguars for two decades.</p>
-      <div class="dest-tags">06 nights · From USD $9,200</div>
-    </a>
-
-    <a href="#" class="dest-card">
-      <div class="dest-image">
-        <span class="dest-overlay-num">IV</span>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=85" alt="Pacific">
-        <div class="dest-overlay-view">View Chapter →</div>
-      </div>
-      <div class="dest-meta-top">
-        <h3 class="dest-name">Pacific</h3>
-        <span class="dest-region">Coast · Manabí</span>
-      </div>
-      <p class="dest-desc">Humpback whales, off-grid haciendas, and the quiet end of Montañita where the surf finds its breath.</p>
-      <div class="dest-tags">04 nights · From USD $6,800 · Jun — Oct</div>
-    </a>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="section-header reveal" style="padding-top: 3rem;">
-    <h2 class="section-title">Three ways to <em>travel</em>.</h2>
-    <div class="section-meta">
-      <span class="eyebrow">Signature Journeys</span>
-      <p class="body-s">Every commission is private. Every itinerary is drawn for one party.</p>
-    </div>
-  </div>
-
-  <article class="service">
-    <div class="service-image">
-      <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=85" alt="Leisure">
-    </div>
-    <div class="service-content">
-      <div class="service-num">I.</div>
-      <h3 class="service-title">Signature <em>Leisure</em></h3>
-      <p class="service-desc">Private yachts in the Galápagos. Hacienda dinners under Cotopaxi. A team that knows which captain, which chef, which moment.</p>
-      <ul class="service-features">
-        <li><span>Private guides &amp; vehicles</span><span class="num">i.</span></li>
-        <li><span>Curated lodges &amp; estancias</span><span class="num">ii.</span></li>
-        <li><span>Private aircraft on request</span><span class="num">iii.</span></li>
-      </ul>
-      <a href="#" class="service-link">Explore Leisure <span class="arrow"></span></a>
-    </div>
-  </article>
-
-  <article class="service reverse">
-    <div class="service-image">
-      <img src="https://images.unsplash.com/photo-1542665952-14513db15293?w=1600&q=85" alt="MICE">
-    </div>
-    <div class="service-content">
-      <div class="service-num">II.</div>
-      <h3 class="service-title">Incentive &amp; <em>Corporate</em></h3>
-      <p class="service-desc">Private summits in volcanic landscapes. Off-site retreats where teams arrive as colleagues and leave as company.</p>
-      <ul class="service-features">
-        <li><span>Group sizes 12 — 240</span><span class="num">i.</span></li>
-        <li><span>Logistics &amp; production</span><span class="num">ii.</span></li>
-        <li><span>End-to-end management</span><span class="num">iii.</span></li>
-      </ul>
-      <a href="#" class="service-link">Explore Corporate <span class="arrow"></span></a>
-    </div>
-  </article>
-
-  <article class="service">
-    <div class="service-image">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=85" alt="Weddings">
-    </div>
-    <div class="service-content">
-      <div class="service-num">III.</div>
-      <h3 class="service-title">Destination <em>Weddings</em></h3>
-      <p class="service-desc">An equatorial sunset, a cliff above the Pacific, a private hacienda in the cloud forest. Celebrations across borders, handled across years.</p>
-      <ul class="service-features">
-        <li><span>Multi-day weekend design</span><span class="num">i.</span></li>
-        <li><span>Guest travel coordination</span><span class="num">ii.</span></li>
-        <li><span>Vendor curation &amp; styling</span><span class="num">iii.</span></li>
-      </ul>
-      <a href="#" class="service-link">Explore Weddings <span class="arrow"></span></a>
-    </div>
-  </article>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-grid">
-    <div class="about-left reveal">
-      <div class="about-portrait">
-        <img src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?w=1200&q=85" alt="Founders">
-      </div>
-      <p class="about-caption">— The founding team, Quito, 1998.</p>
-    </div>
-    <div class="about-right reveal">
-      <div class="eyebrow about-eyebrow">The Atelier</div>
-      <h2 class="about-headline">
-        A small house, designing for those who prefer <em>not to be found.</em>
-      </h2>
-      <div class="about-body">
-        <p>
-          <strong>My Tour EC</strong> began in Quito in 1998 as a single travel desk serving a handful of diplomatic families. Three decades on, the principle hasn't changed — we craft <strong>private journeys</strong> for a small number of travelers each year, often returning the same guests across generations.
-        </p>
-        <p>
-          We work with one captain in the Galápagos. One chef in the Old Town. One guide who has tracked jaguars in Yasuní for twenty-two years. Specificity is luxury. Trust is currency.
-        </p>
-        <p>
-          We do not publish itineraries. Each journey is drawn by hand, in consultation, often over months. Our travelers describe what they imagine. We compose the rest.
-        </p>
-      </div>
-      <div class="about-stats">
-        <div class="stat">
-          <div class="stat-num">27<em>+</em></div>
-          <div class="stat-label">Years of Curation</div>
+    <div class="hero-content section-shell">
+      <div class="hero-inner reveal">
+        <div class="hero-kicker">Ecuador · Galápagos · Colombia · Peru</div>
+        <h1 class="hero-title">Viajes privados por <em>Sudamérica</em>, diseñados con criterio.</h1>
+        <p class="hero-copy">My Tour EC crea itinerarios de lujo en Ecuador, Galápagos, Colombia y Peru con salidas privadas, ritmo a medida, hospitalidad elevada y una planificación concierge que cuida cada detalle.</p>
+        <div class="hero-actions">
+          <a class="button" href="#inquiry"><span>Plan Your Journey</span><span class="arrow" aria-hidden="true"></span></a>
+          <a class="button-ghost" href="https://wa.me/593999217343?text=Hola%20My%20Tour%20EC,%20quiero%20planificar%20un%20viaje%20privado." target="_blank" rel="noreferrer"><span>WhatsApp directo</span></a>
         </div>
-        <div class="stat">
-          <div class="stat-num">04</div>
-          <div class="stat-label">South American Worlds</div>
+        <div class="hero-meta-row">
+          <a class="pill-link" href="tel:+593999217343">+593 99 921 7343</a>
+          <a class="pill-link" href="mailto:info@mytourec.com">info@mytourec.com</a>
+          <a class="pill-link" href="#destinations">Explore Destinations</a>
         </div>
-        <div class="stat">
-          <div class="stat-num">98<em>%</em></div>
-          <div class="stat-label">Return Travelers</div>
+      </div>
+
+      <aside class="hero-aside reveal">
+        <div class="tiny-label">Private travel atelier</div>
+        <h3>Speak with a travel designer.</h3>
+        <p>WhatsApp, email and direct phone access are always available for bespoke planning.</p>
+        <ul class="hero-aside-list">
+          <li><span>Fastest reply</span><strong>WhatsApp</strong></li>
+          <li><span>Email concierge</span><strong>info@mytourec.com</strong></li>
+          <li><span>Planning line</span><strong>+593 99 921 7343</strong></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="section-shell intro-grid">
+      <div class="reveal">
+        <div class="section-kicker eyebrow">A South American travel atelier</div>
+        <h2 class="section-title">Menos turismo. Más <em>acceso, ritmo y criterio</em>.</h2>
+        <p class="section-copy">Cada salida se compone de forma privada y artesanal. Diseñamos viajes para viajeros que buscan tiempo bien usado, alojamientos con carácter y una sensación de descubrimiento que se siente personal desde la primera conversación.</p>
+      </div>
+      <div class="intro-stats reveal">
+        <div class="intro-stat">
+          <strong>27+</strong>
+          <span class="stat-label">Years of curation</span>
+        </div>
+        <div class="intro-stat">
+          <strong>04</strong>
+          <span class="stat-label">Ecuadorian worlds</span>
+        </div>
+        <div class="intro-stat">
+          <strong>24/7</strong>
+          <span class="stat-label">Concierge support</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- INQUIRY -->
-<section class="inquiry" id="inquiry">
-  <div class="inquiry-inner">
-    <div class="eyebrow inquiry-eyebrow">— Commission a Journey —</div>
-    <h2 class="inquiry-headline reveal">
-      Tell us what you're <em>imagining.</em>
-    </h2>
-    <p class="inquiry-sub reveal">
-      Every journey begins with a single conversation. Share a few details and a travel designer — not an assistant, not a form — will reply within one working day.
-    </p>
-
-    <div class="inquiry-steps reveal">
-      <div class="step">
-        <div class="step-num">I.</div>
-        <div class="step-title">Where</div>
-        <div class="step-desc">Choose one or many — Galápagos, Andes, Amazon, Pacific, Colombia, Peru.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">II.</div>
-        <div class="step-title">When &amp; Who</div>
-        <div class="step-desc">Your date window, the size of your party, the spirit of your trip.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">III.</div>
-        <div class="step-title">You</div>
-        <div class="step-desc">A name, a way to reach you, and one open line — what you're hoping to feel.</div>
+  <section class="worlds reveal" id="worlds">
+    <div class="worlds-media">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=2400&q=90" alt="Cotopaxi Andes cinematic landscape" loading="lazy" decoding="async">
+    </div>
+    <div class="worlds-content">
+      <div>
+        <div class="section-kicker eyebrow">Ecuador in four chapters</div>
+        <h2 class="worlds-title">Four <em>worlds</em>.<br>One country.</h2>
+        <div class="worlds-regions">Galápagos · Andes · Amazon · Pacific Coast</div>
       </div>
     </div>
+  </section>
 
-    <div class="inquiry-cta-row reveal">
-      <a href="#" class="btn-gold">
-        <span>Begin the Conversation</span>
-        <span class="arrow"></span>
-      </a>
-      <div class="inquiry-direct">
-        Or write directly to <a href="mailto:info@mytourec.com">info@mytourec.com</a>
+  <section class="section destinations" id="destinations">
+    <div class="section-shell">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-kicker eyebrow">Destinations</div>
+          <h2 class="section-title">Un portafolio de <em>paisajes y atmósferas</em>.</h2>
+        </div>
+        <div class="section-meta">
+          <h4>Designed as private chapters</h4>
+          <p>Cada destino se presenta como una narrativa distinta: más calma, más profundidad y mejor servicio de principio a fin.</p>
+        </div>
+      </div>
+
+      <div class="destination-grid">
+        <a class="destination-card reveal" href="/en/destinations/galapagos">
+          <div class="destination-image">
+            <img src="https://images.unsplash.com/photo-1589182337358-2cb63099350c?w=1600&q=85" alt="Galápagos islands and wildlife" loading="lazy" decoding="async">
+            <div class="destination-overlay">
+              <span class="destination-number">I</span>
+              <span class="destination-region">Galápagos</span>
+            </div>
+            <span class="destination-view button-ghost">View Chapter</span>
+          </div>
+          <div class="destination-meta">
+            <div class="destination-head">
+              <h3>Galápagos</h3>
+              <span class="destination-region">Archipelago</span>
+            </div>
+            <p class="destination-copy">Yates privados, fauna icónica, desembarques guiados y el ritmo exacto para entrar al archipiélago sin prisa ni exceso.</p>
+            <div class="destination-tags">Wildlife · Yacht mood · Island access</div>
+          </div>
+        </a>
+
+        <a class="destination-card reveal" href="/en/destinations/highlands">
+          <div class="destination-image">
+            <img src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1200&q=85" alt="Highlands and volcanoes" loading="lazy" decoding="async">
+            <div class="destination-overlay">
+              <span class="destination-number">II</span>
+              <span class="destination-region">Highlands</span>
+            </div>
+            <span class="destination-view button-ghost">View Chapter</span>
+          </div>
+          <div class="destination-meta">
+            <div class="destination-head">
+              <h3>Highlands</h3>
+              <span class="destination-region">Andes</span>
+            </div>
+            <p class="destination-copy">Volcanes, haciendas, gastronomía de altura y jornadas con carácter para quienes prefieren montaña, diseño y aire limpio.</p>
+            <div class="destination-tags">Cotopaxi · Haciendas · Volcano routes</div>
+          </div>
+        </a>
+
+        <a class="destination-card reveal" href="/en/destinations/amazon">
+          <div class="destination-image">
+            <img src="https://images.unsplash.com/photo-1516486392848-8b67ef89f113?w=1200&q=85" alt="Amazon rainforest river" loading="lazy" decoding="async">
+            <div class="destination-overlay">
+              <span class="destination-number">III</span>
+              <span class="destination-region">Amazon</span>
+            </div>
+            <span class="destination-view button-ghost">View Chapter</span>
+          </div>
+          <div class="destination-meta">
+            <div class="destination-head">
+              <h3>Amazon</h3>
+              <span class="destination-region">Yasuní · Napo</span>
+            </div>
+            <p class="destination-copy">Río, canopy, lodge y guías con mirada local. La Amazonía se plantea con acceso, sensibilidad y logística impecable.</p>
+            <div class="destination-tags">Rainforest · River lodge · Wildlife</div>
+          </div>
+        </a>
+
+        <a class="destination-card reveal" href="/en/destinations/pacific-coast">
+          <div class="destination-image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=85" alt="Pacific coast beach and ocean" loading="lazy" decoding="async">
+            <div class="destination-overlay">
+              <span class="destination-number">IV</span>
+              <span class="destination-region">Pacific Coast</span>
+            </div>
+            <span class="destination-view button-ghost">View Chapter</span>
+          </div>
+          <div class="destination-meta">
+            <div class="destination-head">
+              <h3>Pacific Coast</h3>
+              <span class="destination-region">Manabí</span>
+            </div>
+            <p class="destination-copy">Costa serena, surf elegante, ballenas en temporada y estancias con una sensación más privada del Pacífico ecuatoriano.</p>
+            <div class="destination-tags">Whales · Coastal retreats · Surf quiet</div>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
+  <section class="section services" id="services">
+    <div class="section-shell">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-kicker eyebrow">Services</div>
+          <h2 class="section-title">Tres maneras de viajar con <em>My Tour EC</em>.</h2>
+        </div>
+        <div class="section-meta">
+          <h4>Private by design</h4>
+          <p>Nuestros servicios están construidos para viajeros privados, grupos premium y celebraciones donde la experiencia debe sentirse pulida, no producida.</p>
+        </div>
+      </div>
+
+      <div class="service-stack">
+        <article class="service-card reveal">
+          <div class="service-visual">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=85" alt="Signature leisure private travel" loading="lazy" decoding="async">
+          </div>
+          <div class="service-body">
+            <div class="service-index">I.</div>
+            <h3 class="service-title">Signature <em>Leisure</em></h3>
+            <p class="service-copy">Viajes privados para parejas, familias y amigos que buscan Ecuador y Galápagos con hoteles con carácter, guías adecuados y una logística silenciosa.</p>
+            <ul class="service-features">
+              <li><span>Private guides &amp; vehicles</span><span>i.</span></li>
+              <li><span>Curated lodges, yachts &amp; haciendas</span><span>ii.</span></li>
+              <li><span>Seamless concierge planning</span><span>iii.</span></li>
+            </ul>
+            <a class="button-ghost" href="/en/services/leisure-travel"><span>Explore Leisure</span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-visual">
+            <img src="https://images.unsplash.com/photo-1542665952-14513db15293?w=1600&q=85" alt="Corporate MICE premium group experience" loading="lazy" decoding="async">
+          </div>
+          <div class="service-body">
+            <div class="service-index">II.</div>
+            <h3 class="service-title">Corporate &amp; <em>MICE</em></h3>
+            <p class="service-copy">Retiros, incentivos y eventos corporativos con una estética premium, producción impecable y experiencia local para equipos que necesitan ejecución seria.</p>
+            <ul class="service-features">
+              <li><span>Retreat design &amp; incentive travel</span><span>i.</span></li>
+              <li><span>Production, logistics &amp; supplier control</span><span>ii.</span></li>
+              <li><span>High-touch on-site coordination</span><span>iii.</span></li>
+            </ul>
+            <a class="button-ghost" href="/en/services/corporate-events"><span>Explore Corporate</span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-visual">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=85" alt="Destination wedding elegant celebration" loading="lazy" decoding="async">
+          </div>
+          <div class="service-body">
+            <div class="service-index">III.</div>
+            <h3 class="service-title">Destination <em>Weddings</em></h3>
+            <p class="service-copy">Celebraciones con invitados internacionales, viajes previos y fines de semana completos en destinos que se sienten íntimos, elegantes y memorables.</p>
+            <ul class="service-features">
+              <li><span>Wedding weekend orchestration</span><span>i.</span></li>
+              <li><span>Guest travel &amp; stay coordination</span><span>ii.</span></li>
+              <li><span>Vendor curation &amp; hospitality flow</span><span>iii.</span></li>
+            </ul>
+            <a class="button-ghost" href="/en/services/wedding-services"><span>Explore Weddings</span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section programs" id="programs">
+    <div class="section-shell">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-kicker eyebrow">Programs</div>
+          <h2 class="section-title">Programas pensados para <em>refinar, no improvisar</em>.</h2>
+        </div>
+        <div class="section-meta">
+          <h4>Ready to personalize</h4>
+          <p>Puntos de partida premium para viajeros que desean una estructura inteligente antes de entrar al diseño a medida.</p>
+        </div>
+      </div>
+
+      <div class="program-grid">
+        <article class="program-card reveal">
+          <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?w=1200&q=85" alt="Private luxury yacht journey" loading="lazy" decoding="async">
+          <div class="program-card-body">
+            <div class="program-tag">Galápagos program</div>
+            <h3>Private yacht departures</h3>
+            <p class="program-copy">Yachts pequeños, guías precisos y salidas compuestas para viajeros que valoran el acceso y la calma.</p>
+            <div class="program-meta">Luxury sea days · Naturalist guiding</div>
+            <a class="button" href="/en/programs"><span>View Programs</span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+
+        <article class="program-card reveal">
+          <img src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1200&q=85" alt="Andes premium landscape" loading="lazy" decoding="async">
+          <div class="program-card-body">
+            <div class="program-tag">Andes edition</div>
+            <h3>Volcanoes &amp; haciendas</h3>
+            <p class="program-copy">Una lectura más pulida de la sierra: arquitectura, mesa, volcanes y ritmos bien medidos.</p>
+            <div class="program-meta">Highland hotels · Scenic pacing</div>
+            <a class="button-ghost" href="/en/programs"><span>Refine This Journey</span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+
+        <article class="program-card reveal">
+          <img src="https://images.unsplash.com/photo-1516486392848-8b67ef89f113?w=1200&q=85" alt="Amazon curated expedition" loading="lazy" decoding="async">
+          <div class="program-card-body">
+            <div class="program-tag">Rainforest program</div>
+            <h3>Amazon access, privately led</h3>
+            <p class="program-copy">Exploración con lodge, río y vida silvestre diseñada para sentirse inmersiva sin perder confort.</p>
+            <div class="program-meta">River journeys · Elevated lodge stays</div>
+            <a class="button-ghost" href="/en/programs"><span>See Program Details</span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section colombia-peru" id="colombia-peru">
+    <div class="section-shell region-shell reveal">
+      <div>
+        <div class="section-kicker eyebrow">Colombia &amp; Peru</div>
+        <h2 class="section-title">Extensiones regionales para un viaje más <em>completo</em>.</h2>
+        <p class="section-copy" style="color: rgba(255,255,255,0.78);">Cuando la historia pide una ruta más amplia, My Tour EC diseña cruces naturales entre Ecuador, Colombia y Peru con una sola mirada, un solo equipo y un estándar coherente de servicio.</p>
+        <div class="hero-actions" style="margin-top:1.6rem; margin-bottom:0;">
+          <a class="button" href="/en/colombia-peru"><span>Explore Colombia &amp; Peru</span><span class="arrow" aria-hidden="true"></span></a>
+          <a class="button-ghost" href="#inquiry"><span>Speak With a Travel Designer</span></a>
+        </div>
+      </div>
+
+      <div class="region-panel">
+        <div class="tiny-label">Cross-border structure</div>
+        <div class="region-highlights">
+          <div><strong>One itinerary language.</strong> Hotels, guides, flights and pacing shaped as one journey instead of stitched reservations.</div>
+          <div><strong>Luxury continuity.</strong> The same design logic across Quito, Bogotá, Cartagena, Lima, Sacred Valley and beyond.</div>
+          <div><strong>Fast planning.</strong> Contact one team and open the whole regional conversation in a single step.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section journal" id="journal">
+    <div class="section-shell">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-kicker eyebrow">Journal</div>
+          <h2 class="section-title">Inspiración editorial con una mirada más <em>curada</em>.</h2>
+        </div>
+        <div class="section-meta">
+          <h4>Travel notes</h4>
+          <p>Piezas cortas para ayudar a decidir mejor: temporadas, ritmos de viaje, combinaciones y nuevos caminos.</p>
+        </div>
+      </div>
+
+      <div class="journal-grid">
+        <article class="journal-card reveal">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1200&q=85" alt="Pacific coast journal mood" loading="lazy" decoding="async">
+        </article>
+        <article class="journal-card reveal">
+          <div class="journal-card-body">
+            <div class="blog-card-tag">Featured note</div>
+            <h3 class="journal-title">When to pair the Galápagos with the Andes.</h3>
+            <p class="journal-copy">Cómo equilibrar navegación, altura, gastronomía y descanso sin sacrificar estilo ni tiempo útil. Un buen viaje no agrega más destinos; compone mejor el ritmo.</p>
+            <div class="journal-meta">Seasonality · Pairings · Planning logic</div>
+            <a class="button" href="/en/blog"><span>Read the Journal</span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="section-shell about-grid">
+      <div class="about-visual reveal">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?w=1200&q=85" alt="My Tour EC founders and hospitality storytelling" loading="lazy" decoding="async">
+        </div>
+        <p class="about-caption">An Ecuadorian atelier shaped around access, hospitality and long-term trust.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="section-kicker eyebrow">About us</div>
+        <h2 class="about-title">Una casa de viajes para quienes valoran <em>detalle, discreción y criterio local</em>.</h2>
+        <div class="about-copy">
+          <p><strong>My Tour EC</strong> opera desde Quito con una mirada artesanal sobre el viaje premium. No trabajamos con volumen: trabajamos con precisión, relaciones y una lectura muy clara del tipo de experiencia que cada viajero quiere sentir.</p>
+          <p>Nuestro valor no está solo en reservar mejor, sino en decidir mejor: qué guía, qué ritmo, qué propiedad, qué secuencia y qué tipo de acceso conviene para que el viaje se sienta natural, no programado.</p>
+          <p>La diferencia se nota en silencios logísticos, transiciones fluidas y decisiones que parecen pequeñas, pero construyen una experiencia mucho más alta.</p>
+        </div>
+        <div class="about-stats">
+          <div class="intro-stat">
+            <strong>1998</strong>
+            <span class="stat-label">Founded in Quito</span>
+          </div>
+          <div class="intro-stat">
+            <strong>4</strong>
+            <span class="stat-label">Core travel worlds</span>
+          </div>
+          <div class="intro-stat">
+            <strong>1</strong>
+            <span class="stat-label">Single planning team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section inquiry" id="inquiry">
+    <div class="section-shell inquiry-shell">
+      <div class="inquiry-copy reveal">
+        <div class="section-kicker eyebrow">Contact us</div>
+        <h2 class="inquiry-title">Planifica con nosotros tu próximo <em>viaje privado</em>.</h2>
+        <p>Habla con un travel designer por WhatsApp, email o teléfono. Si prefieres, usa este formulario rápido y abriremos un borrador listo para enviar por correo con los datos importantes del viaje.</p>
+        <ul>
+          <li>Galápagos, Andes, Amazon, Pacific Coast, Colombia y Peru.</li>
+          <li>Viajes privados, corporate MICE, bodas destino y programas premium.</li>
+          <li>Respuesta ágil sin saturar la experiencia con formularios innecesarios.</li>
+        </ul>
+        <div class="contact-actions">
+          <a class="button" href="https://wa.me/593999217343?text=Hola%20My%20Tour%20EC,%20quiero%20hablar%20con%20un%20travel%20designer." target="_blank" rel="noreferrer"><span>WhatsApp or Contact</span><span class="arrow" aria-hidden="true"></span></a>
+          <a class="button-ghost" href="mailto:info@mytourec.com?subject=Plan%20My%20Journey%20with%20My%20Tour%20EC"><span>Speak With a Travel Designer</span></a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <h4>Quick inquiry</h4>
+        <form id="contactForm">
+          <input type="text" id="travelerName" name="name" placeholder="Nombre" required>
+          <input type="email" id="travelerEmail" name="email" placeholder="Email" required>
+          <select id="travelRegion" name="region" required>
+            <option value="">Select a destination</option>
+            <option value="Galápagos">Galápagos</option>
+            <option value="Highlands">Highlands</option>
+            <option value="Amazon">Amazon</option>
+            <option value="Pacific Coast">Pacific Coast</option>
+            <option value="Colombia & Peru">Colombia & Peru</option>
+          </select>
+          <textarea id="travelMessage" name="message" placeholder="Cuéntanos fechas, número de viajeros y la experiencia que imaginas."></textarea>
+          <button class="button" type="submit"><span>Begin the Conversation</span><span class="arrow" aria-hidden="true"></span></button>
+        </form>
+        <div class="contact-actions" style="margin-top: 1rem;">
+          <a class="utility-link" href="tel:+593999217343">+593 99 921 7343</a>
+          <a class="utility-link" href="mailto:info@mytourec.com">info@mytourec.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-mark">M&middot;T<span class="dot">·</span>EC</div>
-      <p class="footer-tagline">A South American travel atelier. Quito, since 1998.</p>
+  <div class="section-shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/en" aria-label="My Tour EC home">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-L2aP_gJjbsW5ssGTIQD2Szkd0XsihWNZwA&s" alt="My Tour EC">
+        </a>
+        <p class="footer-copy">My Tour EC designs luxury journeys across Ecuador, Galápagos, Colombia and Peru with private departures, elevated stays and hands-on concierge support.</p>
+        <div class="footer-social">
+          <a class="social-link" href="https://www.instagram.com/mytourec/?hl=es-la" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="social-link" href="https://www.facebook.com/MytourecTours" target="_blank" rel="noreferrer">Facebook</a>
+          <a class="social-link" href="https://www.linkedin.com/company/mytourec-mice-ecuador/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="social-link" href="https://www.youtube.com/@mytourecs.a7325" target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#colombia-peru">Colombia &amp; Peru</a></li>
+          <li><a href="#journal">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Links</h4>
+        <ul>
+          <li><a href="/en/destinations/galapagos">Galápagos</a></li>
+          <li><a href="/en/services/leisure-travel">Leisure Travel</a></li>
+          <li><a href="/en/services/corporate-events">Corporate Events</a></li>
+          <li><a href="/en/services/wedding-services">Wedding Services</a></li>
+          <li><a href="/en/contact-us">Contact Us</a></li>
+          <li><a href="/en/search">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Atelier · Quito</h4>
+        <p>Av. Interoceánica y Siena<br>Edificio Halcón, Office 406<br>Cumbayá, Quito — Ecuador</p>
+        <p><a href="tel:+593999217343">+593 99 921 7343</a><br><a href="mailto:info@mytourec.com">info@mytourec.com</a></p>
+        <p><a href="https://wa.me/593999217343?text=Hola%20My%20Tour%20EC,%20quiero%20planificar%20un%20viaje%20privado." target="_blank" rel="noreferrer">Open WhatsApp</a></p>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Atelier</h4>
-      <ul>
-        <li><a href="#about">The House</a></li>
-        <li><a href="#">Journal</a></li>
-        <li><a href="#">Affiliations</a></li>
-        <li><a href="#">Press</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Journeys</h4>
-      <ul>
-        <li><a href="#destinations">Galápagos</a></li>
-        <li><a href="#destinations">Andes</a></li>
-        <li><a href="#destinations">Amazon</a></li>
-        <li><a href="#destinations">Pacific</a></li>
-      </ul>
-    </div>
-    <div class="footer-contact">
-      <h4>Atelier · Quito</h4>
-      <p>Av. Interoceánica y Siena<br>Edificio Halcón, Office 406<br>Cumbayá, Quito — Ecuador</p>
-      <p><a href="mailto:info@mytourec.com">info@mytourec.com</a><br><a href="tel:+5939921 7343">+ 593 99 921 7343</a></p>
-    </div>
-  </div>
-  <div class="footer-base">
-    <span>© 2026 My Tour EC. A licensed Ecuadorian travel operator.</span>
-    <div class="footer-legal">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Informed Consent</a>
+
+    <div class="footer-base">
+      <span>© 2026 My Tour EC. Licensed Ecuadorian travel operator.</span>
+      <div class="footer-legal">
+        <a href="/en/contact-us">Contact Us</a>
+        <a href="mailto:info@mytourec.com">Email</a>
+        <a href="/en/blog">Blog</a>
+        <a href="/en">English</a>
+        <a href="/es">Español</a>
+      </div>
     </div>
   </div>
 </footer>
 
+<div class="floating-cta" id="floatingCta" aria-label="Quick contact actions">
+  <div class="floating-actions">
+    <a class="floating-link" href="#inquiry">Plan Your Journey</a>
+    <a class="floating-link" href="https://wa.me/593999217343?text=Hola%20My%20Tour%20EC,%20quiero%20planificar%20un%20viaje%20privado." target="_blank" rel="noreferrer">WhatsApp or Contact</a>
+  </div>
+</div>
+
 <script>
-  // -------- LOADER --------
-  window.addEventListener('load', () => {
-    setTimeout(() => document.body.classList.add('loaded'), 2200);
-  });
+  (() => {
+    const body = document.body;
+    const loader = document.getElementById('loader');
+    const nav = document.getElementById('nav');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuOpen = document.getElementById('menuOpen');
+    const menuClose = document.getElementById('menuClose');
+    const menuLinks = Array.from(document.querySelectorAll('.menu-link'));
+    const previews = Array.from(document.querySelectorAll('.menu-preview'));
+    const searchInput = document.getElementById('menuSearchInput');
+    const focusSearch = document.getElementById('focusSearch');
+    const searchResults = document.getElementById('searchResults');
+    const floatingCta = document.getElementById('floatingCta');
+    const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
+    const revealTargets = Array.from(document.querySelectorAll('.reveal'));
+    const contactForm = document.getElementById('contactForm');
 
-  // -------- NAV SCROLL --------
-  const nav = document.getElementById('nav');
-  let lastScroll = 0;
-  const lightSections = ['destinations', 'about', 'about'];
+    const searchIndex = [
+      { label: 'About Us', href: '#about', meta: 'Section' },
+      { label: 'Destinations', href: '#destinations', meta: 'Section' },
+      { label: 'Services', href: '#services', meta: 'Section' },
+      { label: 'Programs', href: '#programs', meta: 'Section' },
+      { label: 'Colombia & Peru', href: '#colombia-peru', meta: 'Section' },
+      { label: 'Blog', href: '#journal', meta: 'Section' },
+      { label: 'Contact Us', href: '#inquiry', meta: 'Section' },
+      { label: 'Galapagos', href: '/en/destinations/galapagos', meta: 'Destination' },
+      { label: 'Highlands', href: '/en/destinations/highlands', meta: 'Destination' },
+      { label: 'Amazon', href: '/en/destinations/amazon', meta: 'Destination' },
+      { label: 'Pacific Coast', href: '/en/destinations/pacific-coast', meta: 'Destination' },
+      { label: 'Leisure Travel', href: '/en/services/leisure-travel', meta: 'Service' },
+      { label: 'Corporate Events', href: '/en/services/corporate-events', meta: 'Service' },
+      { label: 'Wedding Services', href: '/en/services/wedding-services', meta: 'Service' },
+      { label: 'English page', href: '/en', meta: 'Language' },
+      { label: 'Spanish page', href: '/es', meta: 'Language' },
+      { label: 'Contact My Tour EC', href: 'mailto:info@mytourec.com', meta: 'Email' }
+    ];
 
-  const checkNav = () => {
-    const y = window.scrollY;
-    if (y > 80) nav.classList.add('is-scrolled');
-    else nav.classList.remove('is-scrolled');
+    const renderSearchResults = (term = '') => {
+      const clean = term.trim().toLowerCase();
+      const matches = searchIndex.filter((item) => !clean || item.label.toLowerCase().includes(clean) || item.meta.toLowerCase().includes(clean)).slice(0, 8);
 
-    // Detect light/dark sections beneath nav
-    const navHeight = 80;
-    const elBelow = document.elementsFromPoint(window.innerWidth / 2, navHeight + 10);
-    let isLight = false;
-    for (const el of elBelow) {
-      const section = el.closest('section, footer');
-      if (section) {
-        const cls = section.className;
-        if (cls.includes('destinations') || cls.includes('about') || cls.includes('breath') || cls.includes('footer')) {
-          isLight = true;
+      searchResults.innerHTML = matches.map((item) => `
+        <a class="search-result" href="${item.href}">
+          <span>${item.label}</span>
+          <small>${item.meta}</small>
+        </a>
+      `).join('');
+    };
+
+    const setMenuPreview = (key) => {
+      previews.forEach((preview) => {
+        preview.classList.toggle('active', preview.dataset.key === key);
+      });
+    };
+
+    const closeMenu = () => {
+      menuOverlay.classList.remove('is-open');
+      menuOverlay.setAttribute('aria-hidden', 'true');
+      menuOpen.setAttribute('aria-expanded', 'false');
+      body.style.overflow = '';
+    };
+
+    const openMenu = () => {
+      menuOverlay.classList.add('is-open');
+      menuOverlay.setAttribute('aria-hidden', 'false');
+      menuOpen.setAttribute('aria-expanded', 'true');
+      body.style.overflow = 'hidden';
+      window.setTimeout(() => searchInput.focus(), 100);
+    };
+
+    const handleScroll = () => {
+      nav.classList.toggle('is-scrolled', window.scrollY > 60);
+      floatingCta.classList.toggle('is-visible', window.scrollY > 520);
+    };
+
+    let heroIndex = 0;
+    const cycleHero = () => {
+      heroSlides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index === heroIndex);
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
         }
-        break;
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -60px 0px' });
+
+    window.addEventListener('load', () => {
+      window.setTimeout(() => loader.classList.add('is-hidden'), 900);
+    });
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    menuOpen.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', (event) => {
+      if (event.target === menuOverlay || event.target.classList.contains('menu-backdrop')) {
+        closeMenu();
       }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menuOverlay.classList.contains('is-open')) {
+        closeMenu();
+      }
+      if (event.key === '/' && !menuOverlay.classList.contains('is-open')) {
+        event.preventDefault();
+        openMenu();
+      }
+    });
+
+    menuLinks.forEach((link) => {
+      const preview = link.dataset.preview;
+      link.addEventListener('mouseenter', () => setMenuPreview(preview));
+      link.addEventListener('focus', () => setMenuPreview(preview));
+      link.addEventListener('click', () => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          closeMenu();
+        }
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (event) => {
+        const href = anchor.getAttribute('href');
+        if (!href || href === '#') {
+          return;
+        }
+
+        const target = document.querySelector(href);
+        if (target) {
+          event.preventDefault();
+          closeMenu();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    focusSearch.addEventListener('click', () => searchInput.focus());
+    searchInput.addEventListener('input', (event) => renderSearchResults(event.target.value));
+    renderSearchResults();
+
+    revealTargets.forEach((target) => observer.observe(target));
+
+    if (heroSlides.length > 1) {
+      window.setInterval(() => {
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        cycleHero();
+      }, 5000);
     }
-    if (isLight) nav.classList.add('is-light');
-    else nav.classList.remove('is-light');
-  };
-  window.addEventListener('scroll', checkNav, { passive: true });
-  checkNav();
+    cycleHero();
 
-  // -------- MENU --------
-  const menuOpen = document.getElementById('menuOpen');
-  const menuClose = document.getElementById('menuClose');
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuLinks = document.querySelectorAll('.menu-link');
-  const previews = document.querySelectorAll('.menu-preview');
-
-  menuOpen.addEventListener('click', () => {
-    menuOverlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  });
-  menuClose.addEventListener('click', () => {
-    menuOverlay.classList.remove('is-open');
-    document.body.style.overflow = '';
-  });
-
-  menuLinks.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      const key = link.dataset.preview;
-      previews.forEach(p => p.classList.toggle('active', p.dataset.key === key));
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('travelerName').value.trim();
+      const email = document.getElementById('travelerEmail').value.trim();
+      const region = document.getElementById('travelRegion').value.trim();
+      const message = document.getElementById('travelMessage').value.trim();
+      const subject = encodeURIComponent(`Plan My Journey | ${region || 'My Tour EC Inquiry'}`);
+      const bodyText = `Name: ${name}\nEmail: ${email}\nDestination: ${region}\n\nTrip Notes:\n${message || 'I would like to speak with a travel designer.'}`;
+      window.location.href = `mailto:info@mytourec.com?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
     });
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        menuOverlay.classList.remove('is-open');
-        document.body.style.overflow = '';
-        setTimeout(() => {
-          const target = document.querySelector(href);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }, 600);
-      }
-    });
-  });
 
-  // -------- REVEAL ON SCROLL --------
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+    const isFilePreview = window.location.protocol === 'file:';
+    document.querySelectorAll('.lang-link').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        if (!isFilePreview) {
+          return;
+        }
 
-  document.querySelectorAll('.reveal, .dest-card, .service, .worlds').forEach(el => {
-    observer.observe(el);
-  });
-
-  // -------- SMOOTH SCROLL --------
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+        event.preventDefault();
+        document.querySelectorAll('.lang-link').forEach((item) => item.classList.remove('is-active'));
+        link.classList.add('is-active');
+      });
     });
-  });
+  })();
 </script>
-
 </body>
 </html>
